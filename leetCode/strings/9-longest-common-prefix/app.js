@@ -45,6 +45,7 @@ var longestCommonPrefix = function(strs) {
         currentLetter = strs[arrayIndex][stringIndex]
       }
     } else {
+      // if one of the letters in the current loop isn't the same as the current letter, return the prefix
       return prefix;
     }
   }
@@ -53,14 +54,14 @@ var longestCommonPrefix = function(strs) {
 //Example 1:
 
 let strs1 = ["flower","flow","flight"]
-// console.log(longestCommonPrefix(strs1))
+console.log(longestCommonPrefix(strs1))
 // Output: "fl"
 
 
 // Example 2:
 
 let strs2 = ["dog","racecar","car"]
-// console.log(longestCommonPrefix(strs2))
+console.log(longestCommonPrefix(strs2))
 // Output: ""
 // Explanation: There is no common prefix among the input strings.
 

@@ -15,7 +15,6 @@ function validAnagram(str1, str2) {
   let frequencyCounter = {}
 
   // loop through the string and add the frequency of each letter to the objects
-  // TODO bug - I'm not adding one to the counter, figure out how to do that.
   for (let i in str1) {
     let letter = str1[i];
     // if letter exists, increment, otherwise set to 1

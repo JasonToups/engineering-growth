@@ -34,6 +34,7 @@ var longestCommonPrefix = function(strs) {
         return prefix
       }
       // at the end position of the array, if all letters at the same index are equal, do the following;
+      // TODO Optimization - this could be moved outside of the loop, and remove the conditional.
       else if (arrayIndex === strs.length - 1) {
         // append the currentLetter to prefix
         prefix += currentLetter;

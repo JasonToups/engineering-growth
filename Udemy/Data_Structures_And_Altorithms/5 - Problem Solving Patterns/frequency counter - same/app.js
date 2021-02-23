@@ -6,7 +6,7 @@ Write a function called same, which accepts two arrays. The function should retu
 */
 
 // This is a nested loop approach, which is O(n2), which is not efficient enough.
-function same(arr1, arr2) {
+/* function same(arr1, arr2) {
   if(arr1.length !== arr2.length) {
     return false;
   }
@@ -17,11 +17,12 @@ function same(arr1, arr2) {
     }
     //this removes the matching element from the second array
     arr2.splice(correctIndex, 1)
+    // the second array will continue to shorten as values are validated.
   }
   return true
 }
 
-console.log(same([1,2,3,2], [9,1,4,4]))
+console.log(same([1,2,3,2], [9,1,4,4])) */
 
 /* REFACTOR */
 // Time complexity is O(n) linear time

@@ -16,7 +16,7 @@ A blueprint for creating objects with pre-defined properties & methods.
 
 JS doesn't really have Classes, but it uses a prototype-based inheretance.
 
-On MDN, under Classes, it mentions that the Class syntax does not introduce a new object-oriented inheritance model to JS.
+On MDN, under [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), it mentions that the Class syntax does not introduce a new object-oriented inheritance model to JS.
 
 We can implement data structures as Classes.
 

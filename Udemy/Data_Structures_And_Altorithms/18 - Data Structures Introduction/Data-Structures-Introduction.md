@@ -50,7 +50,9 @@ Each variable will create a new Student object with the properties listed above.
 
 The properties can be accessed with dot notation like this: `firstStudent.firstName` would give you, `"Colt"`.
 ## Adding Instance Methods
-Instance methods are Class methods that provide functionality to a single instance of a Class.
+Instance methods are Class methods that provide functionality to a single instance of a Class. 
+
+They are **commonly used** when defining Classes.
 
 For example:
 ```javascript
@@ -90,3 +92,24 @@ class Student {
 `addScore()` manipulates the student data by pushing a value to the scores array, while `calculateAverage()` calculates the average of the student's scores.
 
 ## Adding Static Class Methods
+**Static Methods** are only for the Class, and not an instance of a class. 
+
+Here's the [MDN reference for static methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static).
+
+> The static keyword defines a static method or property for a class. Neither static methods nor static properties can be called on instances of the class. Instead, they're called on the class itself. Static methods are often utility functions, such as functions to create or clone objects, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
+
+They are **not as commonly used** as Instance methods.
+
+To create a static method, use the word `static` before defining your method.
+
+Here's how to add a static method within the above Student class:
+```javascript
+  }
+
+  static enrollStudents(...students){
+    // maybe send an email here.
+  }
+}
+
+Student.enrollStudents([firstStudent, secondStudent]);
+```

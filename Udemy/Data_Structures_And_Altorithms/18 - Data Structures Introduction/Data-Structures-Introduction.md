@@ -46,9 +46,47 @@ Use the `new` keyword.
 let firstStudent = new Student("Colt", "Steele");
 let secondStudent = new Student("Blue", "Steele");
 ```
-Each will create a new Student object with the properties listed above.
+Each variable will create a new Student object with the properties listed above.
 
-
-
+The properties can be accessed with dot notation like this: `firstStudent.firstName` would give you, `"Colt"`.
 ## Adding Instance Methods
-## Data Structures: Adding Class Methods
+Instance methods are Class methods that provide functionality to a single instance of a Class.
+
+For example:
+```javascript
+class Student {
+  constructor(firstName, lastName, year) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.grade = year;
+    this.tardies = 0;
+    this.scores = [];
+  }
+  fullName(){
+    return `Your full name is ${this.firstName} ${this.lastName}`;
+  }
+  markLate(){
+    this.tardies += 1;
+    if(this.tardies >= 3){
+      return "YOU ARE EXPELLED!!!!"
+    }
+    return `${this.firstName} ${this.lastName} has been late ${this.tardies} times`;
+  }
+  addScore(score) {
+    this.scores.push(score);
+    return this.scores;
+  }
+  calculateAverage() {
+    let sum = this.scores.reduce(function(a,b){return a+b;});
+    return sum/this.scores.length;
+  }
+}
+```
+
+`fullName()` is an **instance method** that's accessed within the `Student` Class. Any student created from the Student class has access to this fullName() instance method.
+
+`markLate()` is another **instance method** which will add 1 to the tardies count for the student, so the *student data can be manipulated* with an intance method.
+
+`addScore()` manipulates the student data by pushing a value to the scores array, while `calculateAverage()` calculates the average of the student's scores.
+
+## Adding Static Class Methods

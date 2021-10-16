@@ -5,7 +5,7 @@
 - [Outline & Objectives](#outline--objectives)
 - [Linked List](#linked-list)
   - [Visualizing Data Structures - Linked List](#visualizing-data-structures---linked-list)
-- [Comparisions with Arrays](#comparisions-with-arrays)
+- [Comparisons with Arrays](#comparisons-with-arrays)
 
 ## Outline & Objectives
 
@@ -27,7 +27,7 @@ There is no index in a linked list, you can't directly reference data by its ind
 
 [VisuAlgo - Linked List](https://visualgo.net/en/list?slide=1)
 
-Linked List is a data structure consisting of a **group of vertice**s (nodes) which *together represent a sequence*. 
+Linked List is a data structure consisting of a **group of vertices** (nodes) which *together represent a sequence*. 
 
 Under the simplest form, each vertex is composed of a **data** and a **reference** (link) to the *next vertex in the sequence*. 
 
@@ -40,7 +40,7 @@ Linked List and its variations are used as underlying data structure to implemen
  
 > read this [Wikipedia article about ADT](https://en.wikipedia.org/wiki/Abstract_data_type), if you are not familiar with Abstract Data Types.
 
-## Comparisions with Arrays
+## Comparisons with Arrays
 
 Lists:
 - Do not have indexes!

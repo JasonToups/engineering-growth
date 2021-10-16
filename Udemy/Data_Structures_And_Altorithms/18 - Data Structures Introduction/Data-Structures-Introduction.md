@@ -11,6 +11,8 @@ Data structures are collections of values, the relationships among them, and the
     - [Create Objects from Classes](#create-objects-from-classes)
   - [Adding Instance Methods](#adding-instance-methods)
   - [Adding Static Class Methods](#adding-static-class-methods)
+  - [Blueprint - How to use Classes](#blueprint---how-to-use-classes)
+    - [Using `this` in Classes](#using-this-in-classes)
 - [Overview](#overview)
 ## Which Data Structure is the Best? 
 
@@ -107,7 +109,11 @@ class Student {
 
 Here's the [MDN reference for static methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static).
 
-> The static keyword defines a static method or property for a class. Neither static methods nor static properties can be called on instances of the class. Instead, they're called on the class itself. Static methods are often utility functions, such as functions to create or clone objects, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
+> The `static` keyword defines a **static method** or property for a class. 
+
+> Neither static methods nor static properties can be called on instances of the class. Instead, they're **called on the class itself**. 
+
+> Static methods are often **utility functions**, such as *functions to create or clone objects*, whereas **static properties** are useful for *caches, fixed-configuration*, or *any other data you **don't need to be replicated across instances***.
 
 They are **not as commonly used** as Instance methods.
 
@@ -124,6 +130,24 @@ Here's how to add a static method within the above Student class:
 // you call the method by using Student, not student.
 Student.enrollStudents([firstStudent, secondStudent]);
 ```
+
+## Blueprint - How to use Classes
+
+```javascript
+class DataStructure() {
+  constructor () {
+    // what default properties should it have?
+  }
+  someInstanceMethod() {
+    // what should each object created from this class be able to do?
+  }
+}
+```
+
+### Using `this` in Classes
+
+Inside all of our **instance** methods and **constructors**, the keyword `this` refers to the *object created from that class* (also known as an **instance**)
+
 # Overview
 - Classes are *blueprints* that when created make objects known as **instances**.
 - Classes are created with the `new` keyword.

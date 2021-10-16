@@ -1,4 +1,10 @@
-# Singly Linked Lists
+# Singly Linked Lists <!-- omit in toc -->
+
+
+
+- [Outline](#outline)
+- [Linked List](#linked-list)
+- [Comparisions with Arrays](#comparisions-with-arrays)
 
 ## Outline
 

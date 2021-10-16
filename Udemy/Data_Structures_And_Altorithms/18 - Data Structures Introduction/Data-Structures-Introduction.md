@@ -1,19 +1,19 @@
-# Data Structures Introduction 
+# Data Structures Introduction <!-- omit in toc -->
 Data structures are collections of values, the relationships among them, and the functions or operations that can be applied to the data.
 
-- [Data Structures Introduction](#data-structures-introduction)
-  - [Which Data Structure is the Best?](#which-data-structure-is-the-best)
-  - [ES2015 Class Syntax Overview](#es2015-class-syntax-overview)
-    - [What is a Class?](#what-is-a-class)
-    - [How does Javascript implement the idea of Classes?](#how-does-javascript-implement-the-idea-of-classes)
-  - [Data Structures: The Class Keyword](#data-structures-the-class-keyword)
-    - [Create your Class](#create-your-class)
-    - [Create Objects from Classes](#create-objects-from-classes)
-  - [Adding Instance Methods](#adding-instance-methods)
-  - [Adding Static Class Methods](#adding-static-class-methods)
-  - [Blueprint - How to use Classes](#blueprint---how-to-use-classes)
-    - [Using `this` in Classes](#using-this-in-classes)
+- [Which Data Structure is the Best?](#which-data-structure-is-the-best)
+- [ES2015 Class Syntax Overview](#es2015-class-syntax-overview)
+  - [What is a Class?](#what-is-a-class)
+  - [How does Javascript implement the idea of Classes?](#how-does-javascript-implement-the-idea-of-classes)
+- [Data Structures: The Class Keyword](#data-structures-the-class-keyword)
+  - [Create your Class](#create-your-class)
+  - [Create Objects from Classes](#create-objects-from-classes)
+- [Adding Instance Methods](#adding-instance-methods)
+- [Adding Static Class Methods](#adding-static-class-methods)
+- [Blueprint - How to use Classes](#blueprint---how-to-use-classes)
+  - [Using `this` in Classes](#using-this-in-classes)
 - [Overview](#overview)
+  
 ## Which Data Structure is the Best? 
 
 Different data structures excel at different things. Some are highly specialized, while others (like arrays) are more generally used.
@@ -148,7 +148,7 @@ class DataStructure() {
 
 Inside all of our **instance** methods and **constructors**, the keyword `this` refers to the *object created from that class* (also known as an **instance**)
 
-# Overview
+## Overview
 - Classes are *blueprints* that when created make objects known as **instances**.
 - Classes are created with the `new` keyword.
 - The **contructor** function is a special function that gets run when the class is instantiated.

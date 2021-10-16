@@ -42,12 +42,12 @@ Linked List and its variations are used as underlying data structure to implemen
 
 ## Comparisons with Arrays
 
-Lists:
+Linked Lists:
 - Do not have indexes!
 - Connected via nodes with a **next** pointer.
-- Random access is not allowed.
+- Random access is not allowed. You do not have direct access to the data. You have to traverse the nodes from the beginning to the data.
 
-Lists are great for insertion and deletion.
+Linked Lists are great for *insertion* and *deletion*.
 
 Arrays:
 - Indexed in order!

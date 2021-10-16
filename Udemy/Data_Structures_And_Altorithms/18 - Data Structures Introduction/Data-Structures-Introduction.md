@@ -1,12 +1,23 @@
-# Data Structures Introduction
-
+# Data Structures Introduction 
 Data structures are collections of values, the relationships among them, and the functions or operations that can be applied to the data.
 
-## Which Data Structure is the Best?
+- [Data Structures Introduction](#data-structures-introduction)
+  - [Which Data Structure is the Best?](#which-data-structure-is-the-best)
+  - [ES2015 Class Syntax Overview](#es2015-class-syntax-overview)
+    - [What is a Class?](#what-is-a-class)
+    - [How does Javascript implement the idea of Classes?](#how-does-javascript-implement-the-idea-of-classes)
+  - [Data Structures: The Class Keyword](#data-structures-the-class-keyword)
+    - [Create your Class](#create-your-class)
+    - [Create Objects from Classes](#create-objects-from-classes)
+  - [Adding Instance Methods](#adding-instance-methods)
+  - [Adding Static Class Methods](#adding-static-class-methods)
+- [Overview](#overview)
+## Which Data Structure is the Best? 
 
 Different data structures excel at different things. Some are highly specialized, while others (like arrays) are more generally used.
 
 ## ES2015 Class Syntax Overview
+
 JS doesn't natively support Object Oriented Programming, but since ES2015, JS added some features that support it.
 
 ### What is a Class?
@@ -14,9 +25,9 @@ A blueprint for creating objects with pre-defined properties & methods.
 
 ### How does Javascript implement the idea of Classes?
 
-JS doesn't really have Classes, but it uses a prototype-based inheretance.
+**JS doesn't really have Classes**, but it uses a *prototype-based inheritance*.
 
-On MDN, under [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), it mentions that the Class syntax does not introduce a new object-oriented inheritance model to JS.
+On MDN, under [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), it mentions that the Class syntax *does not introduce a new object-oriented inheritance model* to JS.
 
 We can implement data structures as Classes.
 
@@ -50,7 +61,7 @@ Each variable will create a new Student object with the properties listed above.
 
 The properties can be accessed with dot notation like this: `firstStudent.firstName` would give you, `"Colt"`.
 ## Adding Instance Methods
-Instance methods are Class methods that provide functionality to a single instance of a Class. 
+**Instance methods** are Class methods that provide *functionality to a single instance* of a Class. 
 
 They are **commonly used** when defining Classes.
 

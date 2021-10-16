@@ -44,8 +44,6 @@ Constraints:
     
 */
 
-
-
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {

@@ -163,12 +163,14 @@ class SinglyLinkedList {
     // if the index is less than 0 or greater than the length, return false
     if (index < 0 || index > this.length) return false;
     // if the index is the same as the length, push a new Node to the end of the list
-    if (index === this.length) return this.push(val)
+    // the !! transforms the return to a boolean
+    if (index === this.length) return !! this.push(val)
     // if the index is 0, unshift a new Node to the start of the list
-    if (index === 0) return this.unshift(val)
+    if (index === 0) return !! this.unshift(val)
     // declare a variable for your new Node
     let newNode = new Node(val);
     // otherwise, using the get method, access the node at the index -1
+
     let previousNode = this.get(index -1);
     var previousNodeNext = previousNode.next;
     // set the next property on that Node to be the new Node

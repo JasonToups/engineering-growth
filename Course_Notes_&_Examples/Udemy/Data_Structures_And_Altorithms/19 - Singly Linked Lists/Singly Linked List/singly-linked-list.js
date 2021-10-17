@@ -126,9 +126,43 @@ class SinglyLinkedList {
       return this;
     }
   }
+
+  // returns a Node at a specific index
+  // function accepts an index
+  get(index) {
+    // if the index is less than 0 or greater than or equal to the length of the list, return null
+    if (index < 0 || index >= this.length) {
+      return null
+    }
+    // loop through the list until you reach the index and return the node at that specific index
+    let current = this.head;
+    // counter will be your index in the Linked List
+    let counter = 0;
+    while(counter <= index) {
+      current = current.next
+      counter++;
+      // placing this logic here isn't necessary, but it is semantic and satisfies the "=" logic in the while loop.
+      if (counter === index) {
+        return current;
+      }
+    }
+  }
+  // this function should accept a value & an index.
+  set(index, val) {
+    // use the get function to find the specific node.
+    let foundNode = this.get(index);
+    if (foundNode){
+      // if the node is found, set the value of that node to be the value passed to the function & return true.
+      foundNode.val = val;
+      return true;
+    }
+    return false;
+  }
 }
 
 var list = new SinglyLinkedList()
 list.push("HELLO")
 list.push("GOODBYE")
 list.push("!")
+list.push("<3")
+list.push(":)")

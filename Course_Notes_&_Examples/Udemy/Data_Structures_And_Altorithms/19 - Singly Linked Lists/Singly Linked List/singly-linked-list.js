@@ -147,7 +147,7 @@ class SinglyLinkedList {
       }
     }
   }
-  // this function should accept a value & an index.
+  // this function should accept a value & an index, and update the value at that index.
   set(index, val) {
     // use the get function to find the specific node.
     let foundNode = this.get(index);
@@ -157,6 +157,28 @@ class SinglyLinkedList {
       return true;
     }
     return false;
+  }
+  // this function should accept a value & an index, and will add a new Node at the index.
+  insert(index, val) {
+    // if the index is less than 0 or greater than the length, return false
+    if (index < 0 || index > this.length) return false;
+    // if the index is the same as the length, push a new Node to the end of the list
+    if (index === this.length) return this.push(val)
+    // if the index is 0, unshift a new Node to the start of the list
+    if (index === 0) return this.unshift(val)
+    // declare a variable for your new Node
+    let newNode = new Node(val);
+    // otherwise, using the get method, access the node at the index -1
+    let previousNode = this.get(index -1);
+    var previousNodeNext = previousNode.next;
+    // set the next property on that Node to be the new Node
+    previousNode.next = newNode;
+    // set the property of the new Node to be the previous next.
+    newNode.next = previousNodeNext;
+    // increment the length
+    this.length++;
+    // return True
+    return true;
   }
 }
 

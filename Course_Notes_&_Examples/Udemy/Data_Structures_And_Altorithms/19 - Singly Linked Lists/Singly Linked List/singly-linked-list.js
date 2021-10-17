@@ -115,20 +115,18 @@ class SinglyLinkedList {
     if (!this.head) {
       this.head = newNode;
       this.tail = this.head;
-    }   
-    // otherwise set the newly created node's next property to be the current head property on the list
-    newNode.next = this.head;
-    // set the head property on the list to be that newly created node
-    this.head = newNode;
-    // increment the length of the list by 1
-    this.length++;
-    // return the linked list
-    return this;
-  
+    } else {
+      // otherwise set the newly created node's next property to be the current head property on the list
+      newNode.next = this.head;
+      // set the head property on the list to be that newly created node
+      this.head = newNode;
+      // increment the length of the list by 1
+      this.length++;
+      // return the linked list
+      return this;
+    }
   }
 }
-
-
 
 var list = new SinglyLinkedList()
 list.push("HELLO")

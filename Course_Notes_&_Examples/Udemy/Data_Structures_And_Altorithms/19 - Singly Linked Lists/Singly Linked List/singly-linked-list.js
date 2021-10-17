@@ -11,7 +11,6 @@ class Node {
   constructor(val) {
     this.val = val;
     this.next = null;
-
   }
 }
 
@@ -30,8 +29,7 @@ class SinglyLinkedList {
     this.length = 0;
   }
   
-  // this push function should accept a value
-  
+  // this push function should accept a value, and add that value as a Node to the Linked List.
   push(val){
     // Create a new node using the value passed to the function
     let newNode = new Node(val);
@@ -61,15 +59,15 @@ class SinglyLinkedList {
   }
 
   
-  // this pop function
-  
+  // This pop function will remove the last Node.
   pop() {
     // If there are no nodes in the list, return undefined
     if (!list.length) return undefined;
-    // Loop through the list until you reach the tail
     let current = this.head;
+    // newTail lags behind current to keep track of the previous Node.
     let newTail = current;
-
+    
+    // Loop through the list until you reach the tail
     while (current.next) {
       newTail = current;
       current = current.next;
@@ -82,6 +80,7 @@ class SinglyLinkedList {
     // Decrement the length of the list by 1
     this.length--;
 
+    // This safeguards against popping Nodes to the point where the list length is 0.
     if (this.length === 0) {
       this.head = null;
       this.tail = null;
@@ -89,6 +88,43 @@ class SinglyLinkedList {
 
     // Return the value of the node removed
     return current;
+  }
+  
+  // Shift in a linked list is very efficient, since it's performed in real time, as opposed to an array, where each index needs to be reassigned when an element of the array is removed.
+  // Removes the first element from the Linked List.
+  shift() {
+    // if there are no nodes, return undefined
+    if (!list.length) return undefined;
+    // store the current head property in a variable
+    let currentHead = this.head
+    // set the head property to be the current head's next property
+    this.head = currentHead.next
+    // decrement the length by 1
+    this.length--;
+    if (this.length === 0) {
+      this.tail = null;
+    }
+    // return the value of the node removed.
+    return currentHead
+  }
+  // adds to the beginning of the Linked List
+  unshift(val) {
+    // create a new node using the value passed to the function
+    let newNode = new Node(val);
+    // if there is no head property on the list, set the head and tail to be the newly created node
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = this.head;
+    }   
+    // otherwise set the newly created node's next property to be the current head property on the list
+    newNode.next = this.head;
+    // set the head property on the list to be that newly created node
+    this.head = newNode;
+    // increment the length of the list by 1
+    this.length++;
+    // return the linked list
+    return this;
+  
   }
 }
 

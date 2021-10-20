@@ -16,6 +16,8 @@ sim = {
   neighborhood: [],
   createFireWidth: null,
   createFireHeight: null,
+  fireWidth: [],
+  fireHeight: [],
   setFirestationWidth: null,
   setFirestationHeight: null,
 }
@@ -103,13 +105,9 @@ function dispatchFiremen(width, height){
   console.log("firemen heading out")
   // guide the firemen to the start or end of the fire
   // the firemen need to reach the
-  // fireWidth["start", "end"] 
-  // fireHeight["start", "end"]
-  for (let a = 0; a < height; a++) {
-    for (let b = 0; b < width; b++) {
-
-    }
-  }
+  // sim.fireWidth["start", "end"] 
+  // sim.fireHeight["start", "end"]
+  
 }
 
 dispatchFiremen(sim.setFirestationWidth, sim.setFirestationHeight)

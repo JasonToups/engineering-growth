@@ -1,3 +1,17 @@
+# This app renders a searchbar & an image list
+
+## Component Breakdown
+
+There will be:
+- App
+  - SearchBar
+  - ImageList
+
+## UX Features
+A searchbar is rendered that accepts user input, and renders a grid of photos from the unsplash response.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

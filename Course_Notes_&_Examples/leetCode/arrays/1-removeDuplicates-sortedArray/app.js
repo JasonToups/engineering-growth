@@ -40,19 +40,20 @@ for (int i = 0; i < len; i++) {
 * @param {number[]} nums
 * @return {number}
 */
-var removeDuplicates = function (nums) {
-  console.log(nums)
-  for (let i = 0; i < nums.length; i++) {
-    console.log(nums[i]);
-    if (nums[i] === nums[i + 1]) {
-      console.log('same number');
-      nums.splice((i + 1), 1);
-      i--
-    } else {
-      console.log('new number')
-    }
+var removeDuplicates = function(nums) {
+  let num = 0;
+  let compare = 1;
+  while (num < nums.length) {
+      if (compare === nums.length + 1) {
+        num++;
+        compare = num + 1;
+      } else if (nums[num] === nums[compare]) {
+        nums.splice(compare, 1);
+      } else if (nums[num] !== nums[compare]) {
+          compare++;
+      } 
   }
-  return (nums.length)
+  return nums.length
 };
 
 let array1 = [1, 1, 2, 3, 4, 4, 4, 5]

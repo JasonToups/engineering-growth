@@ -46,14 +46,39 @@ If the next index is higher than the current index, buy at the current index rat
 */
 
 const maxProfit = function (prices) {
-
+  let maxProfit = 0;
+  let profit = 0;
+  let number = 0;
+  let compare = 1;
+  console.log(prices)
+  while (number < prices.length){
+    if((prices[compare] - prices[number]) > profit){
+      profit += prices[compare] - prices[number];
+      console.log(`prices number ${prices[number]}`)
+      console.log(`prices compare ${prices[compare]}`)
+      console.log(`we have profit: ${profit}`)
+      compare++;
+    } else if ((prices[compare] - prices[number]) < profit){
+      console.log(`prices number ${prices[number]}`)
+      console.log(`prices compare ${prices[compare]}`)
+      console.log('next compare')
+      number = compare;
+      compare++
+    } else {
+      console.log(`prices number ${prices[number]}`)
+      console.log(`prices compare ${prices[compare]}`)
+      console.log('next number')
+      number++
+    }
+  }
+  return profit;
 };
 
 let array1 = [7, 1, 5, 3, 6, 4]
 console.log(maxProfit(array1));
-let array2 = [1, 2, 3, 4, 5]
-console.log(maxProfit(array2));
-let array3 = [7, 6, 4, 3, 1]
-console.log(maxProfit(array3));
-let array4 = [2, 1, 2, 0, 1]
-console.log(maxProfit(array4));
+// let array2 = [1, 2, 3, 4, 5]
+// console.log(maxProfit(array2));
+// let array3 = [7, 6, 4, 3, 1]
+// console.log(maxProfit(array3));
+// let array4 = [2, 1, 2, 0, 1]
+// console.log(maxProfit(array4));

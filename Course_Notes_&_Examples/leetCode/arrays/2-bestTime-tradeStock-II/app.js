@@ -45,6 +45,12 @@ If the next index is higher than the current index, buy at the current index rat
 The index of the loop should compare to the previous index.
 If the previous index is lower than the current, then add the difference to the max variable.
 If the previous index is higher than the current, then don't add anything to the max variable.
+
+Used this for the solution
+https://javascript.plainenglish.io/algorithm-best-time-to-buy-and-sell-stock-bf5309195a4b
+
+Should go back and write this from scratch later
+
 */
 
 function maxProfit(prices) {

@@ -43,7 +43,8 @@ Constraints:
 /* MUTATE NUMS */
 
 var rotate = function(nums, k) {
-    console.log(nums)
+    console.log(nums);
+    
 };
 
 // Inputs

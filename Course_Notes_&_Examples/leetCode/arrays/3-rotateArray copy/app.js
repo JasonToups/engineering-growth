@@ -42,26 +42,38 @@ Constraints:
 
 /* MUTATE NUMS */
 
+/* Plan for optimization
+The current code doesn't work for the last test case, since we are basing everything off of length, and not the times that the operation needs to happen.
+
+So the loop end condition should be k.
+
+popping from the end, and unshifting to the beginning, k times should work
+
+Ok, so this isn't great with time complexity, is JS is re-seating each element in the array under the hood.
+
+Look into this explanation.
+https://dev.to/seanwelshbrown/two-ways-to-rotate-an-array-in-javascript-1bi3
+*/
+
 var rotate = function(nums, k) {
-  let numsSplice = nums.splice(nums.length - k, k);
-  // console.log(numsSplice);
-  for (let i = numsSplice.length - 1; i >= 0 ; i--) {
-    nums.unshift(numsSplice[i]);
+  while (k > 0) {
+      nums.unshift( nums.pop() );
+      k--;
   }
-  return nums;
+  return nums
 };
 // Optimize
 // placing each element in its original position while keeping track of the element originally in that position. Basically, at every step, we place an element in its rightful position and keep track of the element already there or the one being overwritten in an additional variable.
 
 // Inputs
-var nums = [1, 2, 3, 4, 5, 6, 7];
-var k = 3;
-console.log(rotate(nums, k));
-console.log("Should be: [ 5, 6, 7, 1, 2, 3, 4]");
-var nums =  [-1, -100, 3, 99];
-var k = 2;
-console.log(rotate(nums, k));
-console.log("Should be: [ 3, 99, -1, -100]");
+// var nums = [1, 2, 3, 4, 5, 6, 7];
+// var k = 3;
+// console.log(rotate(nums, k));
+// console.log("Should be: [ 5, 6, 7, 1, 2, 3, 4]");
+// var nums =  [-1, -100, 3, 99];
+// var k = 2;
+// console.log(rotate(nums, k));
+// console.log("Should be: [ 3, 99, -1, -100]");
 var nums = [1,2];
 var k = 5;
 console.log(rotate(nums, k));

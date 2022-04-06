@@ -41,36 +41,51 @@ Constraints:
  */
 
 /* MUTATE NUMS */
-// Try using nums.unshift() to mutate the array in place.
-// First we use unshift() to add a splice of the array to the beginning of the array.
-// The ... spread operator will select several elements of the array at one time
-// Then the splice() method will get the starting position by subtracting k from the length of the numbers array.
-var rotate = function (nums, k) {
-  nums.unshift(...nums.splice(nums.length - k));
-  return nums;
-};
 
-/* Brute Force, no space constraints */
-/* var rotate = function (nums, k) {
-  const a = [];
-  console.log('start');
-  for (i = k + 1; i < nums.length; i++) {
-    console.log(nums[i]);
-    a.push(nums[i]);
+/* Plan for optimization
+The current code doesn't work for the last test case, since we are basing everything off of length, and not the times that the operation needs to happen.
+
+So the loop end condition should be k.
+
+popping from the end, and unshifting to the beginning, k times should work
+
+Ok, so this isn't great with time complexity, is JS is re-seating each element in the array under the hood.
+
+Look into this explanation.
+https://dev.to/seanwelshbrown/two-ways-to-rotate-an-array-in-javascript-1bi3
+
+https://javascript.plainenglish.io/algorithms-101-rotate-array-in-javascript-three-solutions-260fbc923b64
+
+Looks like I should use splice instead of pop()
+
+And I should create an if / else statement to handle the case where k is larger than the length of nums.
+
+Also use the spread operator to place the grabbed array into place in nums as individual indexes.
+*/
+
+var rotate = function(nums, k) {
+  if (nums.length > k) {
+    nums.unshift( ...nums.splice(-k) );
+  } else {
+    while(k--) {
+      nums.unshift( nums.pop() );
+    }
   }
-  for (j = 0; j <= k; j++) {
-    console.log(nums[j]);
-    a.push(nums[j]);
-  }
-  nums = a;
-  return nums;
-}; */
+  return nums
+};
+// Optimize
+// placing each element in its original position while keeping track of the element originally in that position. Basically, at every step, we place an element in its rightful position and keep track of the element already there or the one being overwritten in an additional variable.
+
 // Inputs
-var nums = [1, 2, 3, 4, 5, 6, 7];
-var k = 3;
+// var nums = [1, 2, 3, 4, 5, 6, 7];
+// var k = 3;
+// console.log(rotate(nums, k));
+// console.log("Should be: [ 5, 6, 7, 1, 2, 3, 4]");
+// var nums =  [-1, -100, 3, 99];
+// var k = 2;
+// console.log(rotate(nums, k));
+// console.log("Should be: [ 3, 99, -1, -100]");
+var nums = [1,2];
+var k = 5;
 console.log(rotate(nums, k));
-// Output: [5, 6, 7, 1, 2, 3, 4];
-var nums = [-1, -100, 3, 99];
-var k = 2;
-console.log(rotate(nums, k));
-// Output: [5, 6, 7, 1, 2, 3, 4];
+console.log("Should be: [ 2, 1]");

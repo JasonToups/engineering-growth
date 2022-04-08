@@ -32,24 +32,21 @@ Output: true
 // Input: Array
 // Output: Boolean
 
-// Take the array and loop through each index
-// At each loop of the index:
-// Run an internal loop that does the following:
-// The index of the outer loop should be compared to the index of the internal loop
-// If the value of the internal index is the same as the external index, then return true.
-// If the value of the internal index is not equal to the external index, advance forward.
-// Advance the external loop forward
-// return false
+/* 
+Use the Set object to store a collection of unique values.
+Then compare the length of the original nums array with the Set.
+The set needs to be converted back to an array, so use the Array.from method, which will convert the set back to an array. Instead, I could use the spread operator to convert back to an array.
+
+*/
 
 var containsDuplicate = function (nums) {
-  for (let i = 0; i < nums.length; i++) {
-    for (let j = i + 1; j < nums.length; j++) {
-      if (nums[j] === nums[i]) {
-        return true;
-      }
-    }
+  let unique = Array.from(new Set(nums));
+
+  if (unique.length === nums.length) {
+    return false;
+  } else {
+    return true;
   }
-  return false;
 };
 
 console.log(containsDuplicate([1, 2, 3, 1]));

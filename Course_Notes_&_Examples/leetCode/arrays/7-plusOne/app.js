@@ -13,48 +13,40 @@ You may assume the integer does not contain any leading zero, except the number 
  */
 
 /* Pseudocode
- Loop through array, starting at the end
-  From the back of the array, add one to the integer
-    if the integer is not a 9, add one
-    if the integer is a 9, make the integer a 0 and carry one over to the next integer.
-
+convert the array to a string, without commas
+convert the string to an integer
+add 1 to the integer
+convert the integer to a comma-separated string
+convert the string to an array
  */
 
 var plusOne = function (digits) {
-  for (let i = digits.length - 1; i >= 0; i--) {
-    if (digits[i] != 9) {
-      digits[i] += 1;
-      return digits;
-    } else {
-      if (i === 0) {
-        digits[i] = 0;
-        digits.unshift(1);
-        return digits;
-      } else {
-        digits[i] = 0;
-        console.log(digits[i]);
-      }
-    }
-  }
+
   return digits;
 };
 
-// NOT WORKING
-// var plusOne = function (digits) {
-//   console.log((parseInt(digits.join('')) + 1).toString().split(''));
-//   return (parseInt(digits.join('')) + 1).toString().split('');
-// };
+
 
 // Example 1:
+var digits = [1, 2, 3]
+console.log(plusOne(digits));
+console.log("Should return Output: [1,2,4]")
+/* Explanation: The array represents the integer 123.
+Incrementing by one gives 123 + 1 = 124.
+Thus, the result should be [1,2,4]. */
 
-console.log(plusOne([1, 2, 3]));
-console.log(plusOne([1, 2, 9]));
-console.log(plusOne([9, 9, 9]));
-// Output: [1,2,4]
-// Explanation: The array represents the integer 123.
+// Example 2:
+var digits = [4, 3, 2, 1]
+console.log(plusOne(digits));
+console.log("Should return Output: [4,3,2,2]")
+/* Explanation: The array represents the integer 4321.
+Incrementing by one gives 4321 + 1 = 4322.
+Thus, the result should be [4,3,2,2]. */
 
-/* Example 2:
-
-Input: [4,3,2,1]
-Output: [4,3,2,2]
-Explanation: The array represents the integer 4321. */
+// Example 3:
+var digits = [9]
+console.log(plusOne(digits));
+console.log("Should return Output: [1,0]")
+/* Explanation: The array represents the integer 9.
+Incrementing by one gives 9 + 1 = 10.
+Thus, the result should be [1,0]. */

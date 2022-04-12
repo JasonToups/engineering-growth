@@ -18,10 +18,15 @@ convert the string to an integer
 add 1 to the integer
 convert the integer to a comma-separated string
 convert the string to an array
+
+ISSUE - parseInt
+ParseInt is not parsing the full integer, and is stopping at around index 16
  */
 
 var plusOne = function (digits) {
 
+  digits = (parseInt((digits.join('')) + 1)).toString().split('');
+  // console.log(typeof(digits));
   return digits;
 };
 
@@ -47,6 +52,14 @@ Thus, the result should be [4,3,2,2]. */
 var digits = [9]
 console.log(plusOne(digits));
 console.log("Should return Output: [1,0]")
+/* Explanation: The array represents the integer 9.
+Incrementing by one gives 9 + 1 = 10.
+Thus, the result should be [1,0]. */
+
+// Example 4:
+var digits = [6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]
+console.log(plusOne(digits));
+console.log("Should return Output: [6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,4]")
 /* Explanation: The array represents the integer 9.
 Incrementing by one gives 9 + 1 = 10.
 Thus, the result should be [1,0]. */

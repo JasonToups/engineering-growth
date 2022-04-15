@@ -30,7 +30,16 @@ return nums
 /* This doesn't work, but it uses JS methods */
 var moveZeroes = function(nums) {
   console.log(nums)
-  
+  for (let i = 0; i < nums.length; i++){
+    console.log(nums[i])
+    if (nums[i] === 0) {
+      // console.log(nums.splice(nums[i], 1));
+      nums.splice(nums[i], 1);
+      nums.push(0);
+      console.log(nums)
+      // i--;
+    }
+  } 
   return nums
 };
 

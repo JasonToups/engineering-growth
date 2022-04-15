@@ -8,7 +8,8 @@ Output: [1,3,12,0,0]
 Note:
 
 You must do this in-place without making a copy of the array.
-Minimize the total number of operations.
+
+Follow up: Could you minimize the total number of operations done?
 
 */
 
@@ -23,35 +24,15 @@ Take the array and loop through it
     If it is 0, then splice the current index and push it to the end of the array.
     If it is not 0, then move to the next index.
 
-return nums
+  return nums
     
 */
 
-/* This doesn't work, but it uses JS methods */
 var moveZeroes = function(nums) {
   console.log(nums)
   
   return nums
 };
-
-/* This works, without methods */
-// var moveZeroes = function(nums) {
-//   let zeroes = 0;
-//   let currentIndex = 0;
-//   for(let i=0; i<nums.length; i++){
-//       if(nums[i]===0){
-//           zeroes++;
-//       } else {
-//           nums[currentIndex] = nums[i];
-//           currentIndex++;
-//       }
-//   };
-//   for(let i = nums.length-1; zeroes>0 ; i--){
-//       nums[i] = 0;
-//       zeroes--;
-//   }
-//   return nums;
-// };
 
 let num1 = [0,1,0,3,12]
 // Output: [1,3,12,0,0]

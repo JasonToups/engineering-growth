@@ -29,14 +29,16 @@ Take the array and loop through it
 */
 
 var moveZeroes = function(nums) {
-  console.log(nums)
   
   return nums
 };
 
-let num1 = [0,1,0,3,12]
-// Output: [1,3,12,0,0]
-console.log(moveZeroes(num1))
-let num2 = [0,0,0,3,12]
-// Output: [3,12,0,0, 0]
-console.log(moveZeroes(num2))
+var num = [0,1,0,3,12]
+console.log(num)
+console.log(moveZeroes(num))
+console.log("Output: [1,3,12,0,0]")
+
+var num = [0,0,0,3,12]
+console.log(num)
+console.log(moveZeroes(num))
+console.log("Output: [3,12,0,0, 0]")

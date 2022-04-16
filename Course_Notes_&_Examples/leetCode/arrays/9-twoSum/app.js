@@ -18,56 +18,66 @@ Only one valid answer exists.
 Input Array of nums & Target
 Output Array of indices
 
-Start a loop through the input array.
-Set a return variable to an empty array.
-  At each index of the loop, add the current index to the next one.
-    An internal loop would continue to add the outer index with the internal index, and compare them to the target.
-      If the target is met, then push the outer index and the inner index to the return array.
-      return the return array.
 */
 
-// Brute force works, Time complexity On^2
-// var twoSum = function(nums, target) {
-//   const result = [];
-//   for(let i =0; i<nums.length; i++){
-//       for(let j=1; j< nums.length; j++){
-//           if(i !== j && nums[i] + nums[j] === target){
-//               result.push(i,j);
-//               return result;
-//           };
-//       };
-//   };
-// };
 // Single loop from other user submission.
 const twoSum = (nums, target) => {
- 
+  let i = 0, compare = 1, indexes = [];
+  console.log(nums)
+  console.log(target)
+  while (i < nums.length - 1) {
+    if (i === compare) {
+      console.log("indexes equal - adding to compare")
+      compare++
+      console.log(nums[compare])
+      console.log(compare)
+    } else if (nums[i] + nums[compare] === target) {
+      indexes.push(i, compare);
+      return indexes
+    } else if (nums[compare] < target && compare < nums.length - 1){
+      console.log("adding to compare")
+      compare++
+      console.log(nums[compare])
+      console.log(compare)
+    } else if (compare >= nums.length) {
+      console.log("compare reached the end")
+      console.log("adding one to index")
+      console.log("setting compare to 1 more than index")
+      i++
+      compare = i + 1
+      console.log(i)
+      console.log(compare)
+    } else {
+      console.log("adding to compare")
+      compare++
+      console.log(nums[compare])
+      console.log(compare)
+    }
+  }
+  return indexes
 };
 
 // Example 1:
-
-//Input:
 nums = [2, 7, 11, 15];
 target = 9;
 console.log(twoSum(nums, target));
-// Output: [0,1]
+console.log("Output: [0,1]")
 // Output: Because nums[0] + nums[1] == 9, we return [0, 1]
 
 // Example 2:
-// Input:
 nums = [3, 2, 4];
 target = 6;
 console.log(twoSum(nums, target));
-// Output: [1,2]
+console.log("Output: [1,2]")
 
 //Example 3:
-//Input:
 nums = [3, 3];
 target = 6;
 console.log(twoSum(nums, target));
-// Output: [0,1]
+console.log("Output: [0,1]")
 
 
 nums = [3, 2, 3]
 target = 6
 console.log(twoSum(nums, target));
-// Output [0,2]
+console.log("Output [0,2]")

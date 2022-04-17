@@ -18,24 +18,106 @@ The given board size is always 9x9. */
  * @return {boolean}
  */
 
+/* 
+Plan
+Create a function that validates the numbers in an array & returns true or false.
+
+
+*/
+
+// I believe this is working
+function validateArray(array) {
+  let nums = {
+    1: 0, 
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0,
+    6: 0,
+    7: 0,
+    8: 0,
+    9: 0
+  };
+  let index = 0;
+  while (index < array.length) {
+    if (array[index] === ".") {
+      index++;
+    } else if (array[index] >= 0 || array[index] <= 9) {
+      nums[`${array[index]}`]++;
+      index++;
+    } else {
+      return false
+    }
+  }
+  let numsValues = Object.values(nums).sort();
+  index = numsValues.length;
+  while (index >= 0) {
+    if (numsValues[index] >= 2){
+      return false;
+    } else {
+      console.log('checking previous value')
+      index--
+    }
+  }
+  return true
+}
+
+// I believe this is working
+function validateRow(board, row) {
+  if (!validateArray(board[row])) {
+    return false
+  } else {
+    return true
+  }
+}
+
+// TODO Need to make an array out of a column, and then pass that into validateArray()
+function validateColumn(board, column) {
+ return true
+}
+
+// TODO Need to make an array out of a column, and then pass that into validateArray()
+function validateQuadrant(board) {
+  if (!board) {
+    return false
+  } else {
+    return true
+  }
+}
+
 const isValidSudoku = function (board) {
-  
+  let index = 0;
+  while (index < board.length) {
+    if (!validateRow(board, index)) {
+      console.log('returning false')
+      return false;
+    } else if (!validateColumn(board, index)) {
+      console.log('returning false')
+      return false;
+    } else {
+      console.log('checking next row')
+      index++
+    }
+  }
+  if (!validateQuadrant(board)) {
+    return false;
+  };
   return true;
 };
 // Input:
-let example1 = [
-  ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
-  ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
-  ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
-  ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
-  ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
-  ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
-  ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
-  ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
-  ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
-];
-console.log(isValidSudoku(example1));
-// Output: true
+// var example = [
+//   ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
+//   ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
+//   ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
+//   ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
+//   ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
+//   ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
+//   ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
+//   ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
+//   ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
+// ];
+// console.log(isValidSudoku(example));
+// console.log("Output: true")
 // // Example 2:
 // let example2 = [
 //   ['8', '3', '.', '.', '7', '3', '.', '.', '.'],
@@ -64,7 +146,7 @@ console.log(isValidSudoku(example1));
 // // Output: false
 // console.log(isValidSudoku(example3));
 
-let example4 = [
+var example = [
   ['.', '.', '.', '.', '5', '.', '.', '1', '.'],
   ['.', '4', '.', '3', '.', '.', '.', '.', '.'],
   ['.', '.', '.', '.', '.', '3', '.', '.', '1'],
@@ -75,5 +157,5 @@ let example4 = [
   ['.', '2', '.', '9', '.', '.', '.', '.', '.'],
   ['.', '.', '4', '.', '.', '.', '.', '.', '.'],
 ];
-// Output: false
-console.log(isValidSudoku(example4));
+console.log(isValidSudoku(example));
+console.log("Output: false")

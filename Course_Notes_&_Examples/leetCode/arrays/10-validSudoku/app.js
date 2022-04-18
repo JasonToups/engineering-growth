@@ -55,7 +55,7 @@ function validateArray(array) {
     if (numsValues[index] >= 2){
       return false;
     } else {
-      console.log('checking previous value')
+      // console.log('checking previous value')
       index--
     }
   }
@@ -71,13 +71,61 @@ function validateRow(board, row) {
   }
 }
 
-// TODO Need to make an array out of a column, and then pass that into validateArray()
+// Make sure this is working)
 function validateColumn(board, column) {
- return true
+  index = 0;
+  array = []
+  // make array to validate
+  while (index < board.length) {
+    array.push(board[index][column])
+    index++
+  }
+  if (!validateArray(array)) {
+    return false
+  } else {
+    return true
+  }
 }
 
 // TODO Need to make an array out of a column, and then pass that into validateArray()
+
 function validateQuadrant(board) {
+  array = [];
+
+  function createQuadrantArray(board, row, column) {
+    let array = [];
+    let rowIndex = row;
+    let columnIndex = column;
+    while (rowIndex <= row + 3 && columnIndex <= column + 3) {
+      if (columnIndex < (column + 3)) {
+        console.log(board[rowIndex][columnIndex]);
+        array.push(board[rowIndex][columnIndex]);
+        columnIndex++;
+        console.log(array)
+        console.log(`Adding 1 to column: ${columnIndex}`);
+        console.log(`Row Index: ${rowIndex}`);
+      } else if (columnIndex === (column + 3) && rowIndex < (row + 2)) {
+        rowIndex++;
+        console.log(`Adding 1 to row: ${rowIndex}`);
+        columnIndex = 0;
+        console.log(`Resetting columnIndex: ${columnIndex}`);
+      } else {
+        columnIndex++;
+        console.log(`Adding 1 to column: ${columnIndex}`);
+      }
+    }
+    console.log(array);
+    return array;
+  }
+
+  function generateQuadrant(board) {
+    // TODO generate the coordinates for the array
+    // TODO run validateArray on the functions
+    createQuadrantArray(board, 0, 0);
+  }
+
+  generateQuadrant(board);
+
   if (!board) {
     return false
   } else {
@@ -95,7 +143,7 @@ const isValidSudoku = function (board) {
       console.log('returning false')
       return false;
     } else {
-      console.log('checking next row')
+      // console.log('checking next row')
       index++
     }
   }

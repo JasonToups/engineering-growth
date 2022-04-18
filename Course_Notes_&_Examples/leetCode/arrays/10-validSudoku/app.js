@@ -87,10 +87,7 @@ function validateColumn(board, column) {
   }
 }
 
-// TODO Need to make an array out of a column, and then pass that into validateArray()
-
 function validateQuadrant(board) {
-  array = [];
 
   function createQuadrantArray(board, row, column) {
     let array = [];
@@ -98,49 +95,67 @@ function validateQuadrant(board) {
     let columnIndex = column;
     while (rowIndex <= row + 3 && columnIndex <= column + 3) {
       if (columnIndex < (column + 3)) {
-        console.log(board[rowIndex][columnIndex]);
+        // console.log(board[rowIndex][columnIndex]);
         array.push(board[rowIndex][columnIndex]);
         columnIndex++;
-        console.log(array)
-        console.log(`Adding 1 to column: ${columnIndex}`);
-        console.log(`Row Index: ${rowIndex}`);
+        // console.log(array)
+        // console.log(`Adding 1 to column: ${columnIndex}`);
+        // console.log(`Row Index: ${rowIndex}`);
       } else if (columnIndex === (column + 3) && rowIndex < (row + 2)) {
         rowIndex++;
-        console.log(`Adding 1 to row: ${rowIndex}`);
-        columnIndex = 0;
-        console.log(`Resetting columnIndex: ${columnIndex}`);
+        // console.log(`Adding 1 to row: ${rowIndex}`);
+        columnIndex = column;
+        // console.log(`Resetting columnIndex: ${columnIndex}`);
       } else {
         columnIndex++;
-        console.log(`Adding 1 to column: ${columnIndex}`);
+        // console.log(`Adding 1 to column: ${columnIndex}`);
       }
     }
-    console.log(array);
+    // console.log(`This is the final array`);
+    // console.log(array);
     return array;
   }
 
   function generateQuadrant(board) {
-    // TODO generate the coordinates for the array
-    // TODO run validateArray on the functions
-    createQuadrantArray(board, 0, 0);
+
+    let row = 0, column = 0;
+    while (row <= 6 && column <= 6) {
+      // console.log(`row: ${row} column ${column}`)
+      if (!validateArray(createQuadrantArray(board, row, column))) {
+        // console.log(false)
+        return false
+      } else if (row === 6 && column === 6) {
+        // console.log(true)
+        return true
+      } else if (column === 6) {
+        // console.log('adding to row')
+        // console.log(row)
+        row += 3;
+        // console.log(row)
+      } else {
+        // console.log('adding to column')
+        // console.log(column)
+        column += 3;
+        // console.log(column)
+      }
+    }
   }
 
-  generateQuadrant(board);
-
-  if (!board) {
-    return false
+  if (!generateQuadrant(board)) {
+    return false;
   } else {
     return true
-  }
+  };
 }
 
 const isValidSudoku = function (board) {
   let index = 0;
   while (index < board.length) {
     if (!validateRow(board, index)) {
-      console.log('returning false')
+      // console.log('returning false')
       return false;
     } else if (!validateColumn(board, index)) {
-      console.log('returning false')
+      // console.log('returning false')
       return false;
     } else {
       // console.log('checking next row')
@@ -152,49 +167,65 @@ const isValidSudoku = function (board) {
   };
   return true;
 };
-// Input:
-// var example = [
-//   ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
-//   ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
-//   ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
-//   ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
-//   ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
-//   ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
-//   ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
-//   ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
-//   ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
-// ];
-// console.log(isValidSudoku(example));
-// console.log("Output: true")
-// // Example 2:
-// let example2 = [
-//   ['8', '3', '.', '.', '7', '3', '.', '.', '.'],
-//   ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
-//   ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
-//   ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
-//   ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
-//   ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
-//   ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
-//   ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
-//   ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
-// ];
-// // Output: false
-// console.log(isValidSudoku(example2));
-// let example3 = [
-//   ['.', '.', '4', '.', '.', '.', '6', '3', '.'],
-//   ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
-//   ['5', '.', '.', '.', '.', '.', '.', '9', '.'],
-//   ['.', '.', '.', '5', '6', '.', '.', '.', '.'],
-//   ['4', '.', '3', '.', '.', '.', '.', '.', '1'],
-//   ['.', '.', '.', '7', '.', '.', '.', '.', '.'],
-//   ['.', '.', '.', '5', '.', '.', '.', '.', '.'],
-//   ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
-//   ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
-// ];
-// // Output: false
-// console.log(isValidSudoku(example3));
 
 var example = [
+  [".",".",".",".",".",".","5",".","."],
+  [".",".",".",".",".",".",".",".","."],
+  [".",".",".",".",".",".",".",".","."],
+  ["9","3",".",".","2",".","4",".","."],
+  [".",".","7",".",".",".","3",".","."],
+  [".",".",".",".",".",".",".",".","."],
+  [".",".",".","3","4",".",".",".","."],
+  [".",".",".",".",".","3",".",".","."],
+  [".",".",".",".",".","5","2",".","."]
+]
+// BUG this should return false when the row === 6 && the column === 3.
+console.log(isValidSudoku(example));
+console.log("Output: false")
+
+// Input:
+/* var example = [
+  ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
+  ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
+  ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
+  ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
+  ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
+  ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
+  ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
+  ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
+  ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
+];
+console.log(isValidSudoku(example));
+console.log("Output: true") */
+// Example 2:
+/* var example = [
+  ['8', '3', '.', '.', '7', '3', '.', '.', '.'],
+  ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
+  ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
+  ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
+  ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
+  ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
+  ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
+  ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
+  ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
+];
+console.log(isValidSudoku(example));
+console.log("Output: false") */
+/* var example = [
+  ['.', '.', '4', '.', '.', '.', '6', '3', '.'],
+  ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
+  ['5', '.', '.', '.', '.', '.', '.', '9', '.'],
+  ['.', '.', '.', '5', '6', '.', '.', '.', '.'],
+  ['4', '.', '3', '.', '.', '.', '.', '.', '1'],
+  ['.', '.', '.', '7', '.', '.', '.', '.', '.'],
+  ['.', '.', '.', '5', '.', '.', '.', '.', '.'],
+  ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
+  ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
+];
+console.log(isValidSudoku(example));
+console.log("Output: false") */
+
+/* var example = [
   ['.', '.', '.', '.', '5', '.', '.', '1', '.'],
   ['.', '4', '.', '3', '.', '.', '.', '.', '.'],
   ['.', '.', '.', '.', '.', '3', '.', '.', '1'],
@@ -206,4 +237,4 @@ var example = [
   ['.', '.', '4', '.', '.', '.', '.', '.', '.'],
 ];
 console.log(isValidSudoku(example));
-console.log("Output: false")
+console.log("Output: false") */

@@ -120,25 +120,28 @@ function validateQuadrant(board) {
 
     let row = 0, column = 0;
     while (row <= 6 && column <= 6) {
-      // console.log(`row: ${row} column ${column}`)
       if (!validateArray(createQuadrantArray(board, row, column))) {
         // console.log(false)
         return false
-      } else if (row === 6 && column === 6) {
-        // console.log(true)
-        return true
       } else if (column === 6) {
         // console.log('adding to row')
         // console.log(row)
         row += 3;
         // console.log(row)
+        // console.log('resetting column')
+        // console.log(column)
+        column = 0
+        // console.log(column)
+        // console.log(`row: ${row} column ${column}`)
       } else {
         // console.log('adding to column')
         // console.log(column)
         column += 3;
         // console.log(column)
+        // console.log(`row: ${row} column ${column}`)
       }
     }
+    return true
   }
 
   if (!generateQuadrant(board)) {
@@ -168,7 +171,7 @@ const isValidSudoku = function (board) {
   return true;
 };
 
-var example = [
+/* var example = [
   [".",".",".",".",".",".","5",".","."],
   [".",".",".",".",".",".",".",".","."],
   [".",".",".",".",".",".",".",".","."],
@@ -181,10 +184,10 @@ var example = [
 ]
 // BUG this should return false when the row === 6 && the column === 3.
 console.log(isValidSudoku(example));
-console.log("Output: false")
+console.log("Output: false") */
 
 // Input:
-/* var example = [
+var example = [
   ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
   ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
   ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
@@ -196,7 +199,7 @@ console.log("Output: false")
   ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
 ];
 console.log(isValidSudoku(example));
-console.log("Output: true") */
+console.log("Output: true")
 // Example 2:
 /* var example = [
   ['8', '3', '.', '.', '7', '3', '.', '.', '.'],

@@ -59,11 +59,12 @@ var matrix = [
 ];
 console.log(rotate(matrix));
 
-/* Output: [
+var solution = [
   [7,4,1],
   [8,5,2],
-  [9,6,3]] 
-  */
+  [9,6,3]
+]
+console.log(solution)
 
 // Example 2:
 

@@ -20,44 +20,35 @@ Constraints:
  Save the first column to a column variable.
  Loop through the reverse column and place those values into the first row of the matrix.
  Unshift the last row
-
-Looping through the final index of the matrix
-Grabbing each of the values from the final index
-Placing them into the values of the first index of each array.
-
-Create an array.
-[7, 4, 1, 8, 5, 2, 9, 6, 3]
-
  */
 
- var rotate = function(matrix) {
-  let hold = [];
-  const matrixLength = matrix.length;
-  
-  for (var y = 0; y <= matrixLength - 1; y++) {
-
-    for (var x = matrixLength - 1; x >= 0; x--) {
-      console.log(matrix[x][y]);
-      hold.push(matrix[x][y])
+//  WORKING
+const rotateImage = matrix => {
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = i; j < matrix[0].length; j++) {
+      const temp = matrix[i][j];
+      console.log(matrix[j][i]);
+      matrix[i][j] = matrix[j][i];
+      matrix[j][i] = temp;
     }
-    matrix.push(hold)
-    hold = [];
-    console.log(hold)
   }
-  matrix.splice(0, matrixLength)
+  for (let k = 0; k < matrix.length; k++) {
+    let row = matrix[k].reverse();
+    matrix[k] = row;
+  }
+
   console.log(matrix);
-  return matrix;
 };
 
 //  Example 1:
 
 // Input:
-var matrix = [
+matrix1 = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9],
 ];
-console.log(rotate(matrix));
+rotateImage(matrix1);
 
 /* Output: [
   [7,4,1],
@@ -67,13 +58,13 @@ console.log(rotate(matrix));
 
 // Example 2:
 
-var matrix = [
+Input: matrix2 = [
   [5, 1, 9, 11],
   [2, 4, 8, 10],
   [13, 3, 6, 7],
   [15, 14, 12, 16],
 ];
-// console.log(rotate(matrix));
+// rotateImage(matrix2);
 
 /* Output: [
   [15,13,2,5],
@@ -84,18 +75,18 @@ var matrix = [
 
 // Example 3:
 
-var matrix = [[1]];
-// console.log(rotate(matrix));
+Input: matrix3 = [[1]];
+// rotateImage(matrix3);
 
 // Output: [[1]]
 
 // Example 4:
 
-var matrix = [
+Input: matrix4 = [
   [1, 2],
   [3, 4],
 ];
-// console.log(rotate(matrix));
+// rotateImage(matrix4);
 
 /* Output: [
   [3,1],

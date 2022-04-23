@@ -14,50 +14,68 @@ Constraints:
     -2147483648
 */
 
+/* 
+PLAN
+Create a variable for isNegative & set to false.
+Take the integer & convert it to a string.
+Take the string & convert it to an array with each digit in a single index.
+Check if there's a negative symbol at x[0]; remove it from the array, and set isNegative to true.
+Reverse the array of integers.
+Convert the reversed array to a string without commas.
+Convert the string to an integer.
+Check if the integer falls outside of the bounds of 2147483648 -2147483648 (see if I can include these numbers to the powers mentioned in the constraints).
+
+*/
+
 var reverse = function(x) {
-  const isNegative = x < 0;
-  if (isNegative){
-    x = x * -1
+  let hold = String(x).split(""), isNegative = false;
+
+  if (hold[0] === '-') {
+    isNegative = true;
+    hold.shift();
   }
-  let answer = ((parseInt((x).toString().split('').reverse().join(''))));
-  if(answer >= -2147483648 && answer <= 2147483648){
-  	return isNegative ? answer * -1 : answer;
+
+  hold = hold.reverse().join("");
+  if (hold < Math.pow(-2, 31) || hold > Math.pow(2, 31)) {
+    return 0
+  } else if (isNegative) {
+    return -hold;  
   }
-  return 0;
+  return hold;
 };
 
-/* // Example 1:
+// Example 1:
 
-const input1 = 123
+var input = 123
 // Output: 321
-reverse(input1)
+// console.log(reverse(input))
 
 // Example 2:
 
-const input2 = -123
+var input = -123
 // Output: -321
-reverse(input2)
+console.log(reverse(input))
 
 // Example 3:
 
-const input3 = 120
+var input = 120
 // Output: 21
-reverse(input3)
+// console.log(reverse(input))
 
 // Example 4:
 
-const input4 = 0
+var input = 0
 // Output: 0
-reverse(input4)
+// console.log(reverse(input))
 
 // Example 5:
 
-const input5 = 21474836489
+var input = 21474836489
 // Output: 0
-reverse(input5) */
+// console.log(reverse(input))
 
 // Example 6:
 
-const input6 = 1534236469
-// Output: 0
-reverse(input6) 
+var input = 1534236469
+// // Output: 0
+// console.log(reverse(input)) 

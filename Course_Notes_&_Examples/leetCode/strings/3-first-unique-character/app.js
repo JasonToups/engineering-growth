@@ -28,6 +28,7 @@ var firstUniqChar = function(s) {
   let index = 0;
   let count = {};
   s = String(s).split("")
+  
   function countOccurrences (s) {
     console.log(s);
     while (index < s.length) {
@@ -50,7 +51,8 @@ var firstUniqChar = function(s) {
       if (Object.keys(object).find(key => object[key].index === value && object[key].count === 1)) {
         console.log(index);
         return index;
-        } else {
+      } else {
+          console.log(index);
           index++
         };
       };

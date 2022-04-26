@@ -30,38 +30,31 @@ var firstUniqChar = function(s) {
   s = String(s).split("")
   
   function countOccurrences (s) {
-    console.log(s);
     while (index < s.length) {
-      console.log(s[index])
       if (count[s[index]]) {
-        count[s[index]].count += 1;
+        count[s[index]]++;
         index++
       } else {
-        count[s[index]] = {count: 1, index: index};
+        count[s[index]] = 1;
         index++
       }
     }
   }
-  console.log(count)
+  
   countOccurrences(s);
-  // TODO debug 'loveleetcode' should return 2
-  // Possible solution - I could loop through the count object, using the s array value as the key of the object, looking for the earliest count of 1, and then return that index. With this approach, I could remove the index from the count object, and only keep the letter & count;
 
-  function findFirstUnique(object, value) {
-    // console.log(Object.keys(object).find(key => object[key].index === value));
-    while (index < s.length) {
-      if (Object.keys(object).find(key => object[key].index === value && object[key].count === 1)) {
-        console.log(index);
+  function findFirstUnique(array, object) {
+    index = 0
+    while (index < array.length) {
+      if (object[array[index]] === 1) {
         return index;
       } else {
-          console.log(index);
           index++
         };
       };
       return -1;
     };
-  index = 0
-  return findFirstUnique(count, index);
+  return findFirstUnique(s, count);
 };
 
 // Examples:

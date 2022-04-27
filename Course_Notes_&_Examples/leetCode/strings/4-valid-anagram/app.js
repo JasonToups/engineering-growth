@@ -18,6 +18,8 @@ What if the inputs contain unicode characters? How would you adapt your solution
 
 /* 
 PLAN
+If the length of both s & t are not equal, return false.
+else
 I could create an object to count all of the letters, by adding a count to each letter.
 Then loop through the t string, and remove the letters from the count object.
   If a letter does not exist in the object, then return false.
@@ -25,10 +27,52 @@ If the previous loop completes:
 Then loop through the s string, and see if there are any counts that are not 0.
 */
 var isAnagram = function(s, t) {
-  console.log(s);
-  console.log(t);
+  let count = {};
+  let index = 0;
+  
+  function createCount (string) {
+    while (index < string.length) {
+      if (count[string[index]]) {
+        count[string[index]]++;
+      } else {
+        count[string[index]] = 1;
+      }
+      index++;
+    }
+    index = 0;
+  }
+  
+  function deleteCount (string) {
+    while (index < string.length) {
+      if (count[string[index]]) {
+        count[string[index]]--;
+      } else {
+        return false
+      }
+      index++;
+    }
+    index = 0;
+  }
 
-  return false
+  function checkZero (string) {
+    while (index < string.length) {
+      if (count[string[index]] != 0) {
+        return false
+      } else {
+        return true
+      }
+    }
+  }
+
+  if (s.length !== t.length) {
+    return false;
+  } else {
+    createCount(s)
+  }
+  
+  deleteCount(t)
+
+  return checkZero(s)
 };
 
 // Example 1:
@@ -41,8 +85,12 @@ console.log(isAnagram(s,t))
 
 // Example 2:
 
-var s1 = "rat"
-var t1 = "car"
+var s = "rat"
+var t = "car"
+// console.log(isAnagram(s,t))
+console.log("Output: false")
 
-console.log(isAnagram(s,t))
-// Output: false
+var s = "aacc"
+var t = "ccac"
+// console.log(isAnagram(s,t))
+console.log("Output: false")

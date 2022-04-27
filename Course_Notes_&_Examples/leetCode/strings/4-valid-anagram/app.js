@@ -39,10 +39,10 @@ var isAnagram = function(s, t) {
       }
       index++;
     }
-    index = 0;
   }
   
   function deleteCount (string) {
+    index = 0;
     while (index < string.length) {
       if (count[string[index]]) {
         count[string[index]]--;
@@ -51,17 +51,17 @@ var isAnagram = function(s, t) {
       }
       index++;
     }
-    index = 0;
   }
-
+  
   function checkZero (string) {
+    index = 0;
     while (index < string.length) {
       if (count[string[index]] != 0) {
         return false
-      } else {
-        return true
       }
+      index++;
     }
+    return true
   }
 
   if (s.length !== t.length) {
@@ -87,10 +87,10 @@ console.log(isAnagram(s,t))
 
 var s = "rat"
 var t = "car"
-// console.log(isAnagram(s,t))
+console.log(isAnagram(s,t))
 console.log("Output: false")
 
 var s = "aacc"
 var t = "ccac"
-// console.log(isAnagram(s,t))
+console.log(isAnagram(s,t))
 console.log("Output: false")

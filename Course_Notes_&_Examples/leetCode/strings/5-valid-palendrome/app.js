@@ -92,7 +92,6 @@ var input = "Marge, let's \"[went].\" I await {news} telegram."
 // console.log(isPalindrome(input)) 
 // console.log("Output: true")
 
-// TODO - debug this one
 var input = "0P"
 console.log(isPalindrome(input)) 
 console.log("Output: false")

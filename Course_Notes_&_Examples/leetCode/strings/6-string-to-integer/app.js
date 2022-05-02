@@ -61,26 +61,53 @@ var myAtoi = function(s) {
   let isNegative = false;
   let spliceStart = 0;
   let spliceEnd = 0;
-  console.log(array);
-  // See if we can parseInt from the start & return a number. This would account for strings that are just numbers
+
+  function outOfBounds(number) {
+    if (number < Math.pow(-2^31)) {
+      integer = -2^31
+    } else if (number > Math.pow(2^31)){
+      integer = 2^31
+    }
+  }
+
+  function firstChar (array, index) {
+    while (index < array.length) {
+      if (array[index] !== " "){
+        console.log(array[index])
+        return true;
+      }
+      index++;
+    }
+    return false;
+  }
+
+  firstChar(array, index)
+
+
   while (index < array.length) {
-    if (!isNaN(parseInt(array[index])) && index === 0){
+    // TODO write check for this:
+    // The first non-whitespace character is 'w', which is not a numerical digit or a +/- sign. Therefore no valid conversion could be performed.
+    if (integerBegins && isNaN(parseInt(array[index]))){
+      break 
+    } else if (!isNaN(parseInt(array[index])) && index === 0){
       console.log('beginning integer')
       integerBegins = true;
     } else if (array[index] === '-'){
       isNegative = true;
     } else if (array[index] === '+') {
       isNegative = false;
-    } else if (!isNaN(parseInt(array[index])) && spliceStart === 0 && !integerBegins) {
-      console.log('setting spliceStart & integerBegins')
+    } else if (!integerBegins && !isNaN(parseInt(array[index])) && spliceStart === 0) {
+      // console.log('setting spliceStart & integerBegins')
       spliceStart = index;
       integerBegins = true;
-    } else if (!isNaN(parseInt(array[index])) && integerBegins) {
-      console.log('setting spliceEnd')
+    } else if (integerBegins && !isNaN(parseInt(array[index]))) {
+      // console.log('setting spliceEnd')
       spliceEnd = index;
     }
     index++;
   }
+  
+  
   integer = parseInt(array.slice(spliceStart, spliceEnd + 1).join(""));
   if (isNegative) {
     integer = -integer;
@@ -88,14 +115,70 @@ var myAtoi = function(s) {
   console.log(isNegative)
   console.log(spliceStart)
   console.log(spliceEnd)
+
+  outOfBounds(integer)
+
   return integer;
 };
+
+// Working for some test cases
+// var myAtoi = function(s) {
+//   let array = s.split("");
+//   let index = 0;
+//   let integer = 0;
+//   let integerBegins = false;
+//   let isNegative = false;
+//   let spliceStart = 0;
+//   let spliceEnd = 0;
+
+//   while (index < array.length) {
+//     // TODO write check for this:
+//     // The first non-whitespace character is 'w', which is not a numerical digit or a +/- sign. Therefore no valid conversion could be performed.
+//     if (isNaN(parseInt(array[index])) && integerBegins){
+//       break 
+//     } else if (!isNaN(parseInt(array[index])) && index === 0){
+//       console.log('beginning integer')
+//       integerBegins = true;
+//     } else if (array[index] === '-'){
+//       isNegative = true;
+//     } else if (array[index] === '+') {
+//       isNegative = false;
+//     } else if (!isNaN(parseInt(array[index])) && spliceStart === 0 && !integerBegins) {
+//       // console.log('setting spliceStart & integerBegins')
+//       spliceStart = index;
+//       integerBegins = true;
+//     } else if (!isNaN(parseInt(array[index])) && integerBegins) {
+//       console.log('setting spliceEnd')
+//       spliceEnd = index;
+//     }
+//     index++;
+//   }
+//   integer = parseInt(array.slice(spliceStart, spliceEnd + 1).join(""));
+//   if (isNegative) {
+//     integer = -integer;
+//   }
+//   console.log(isNegative)
+//   console.log(spliceStart)
+//   console.log(spliceEnd)
+
+//   function outOfBounds(number) {
+//     if (number < Math.pow(-2^31)) {
+//       integer = -2^31
+//     } else if (number > Math.pow(2^31)){
+//       integer = 2^31
+//     }
+//   }
+
+//   outOfBounds(integer)
+
+//   return integer;
+// };
 
  /* Test Cases */
 //  Example 1:
 var str = "42"
 // console.log("should be 42")
-// console.log(myAtoi(str), typeof(myAtoi(str)))
+// console.log(myAtoi(str))
 // console.log("Output: 42")
 
 // Example 2:
@@ -109,9 +192,9 @@ console.log("Output: -42")
 
 // Example 3:
 var str = "4193 with words"
-console.log("example 3 should be 4193")
-console.log(myAtoi(str))
-console.log("Output: 4193")
+// console.log("example 3 should be 4193")
+// console.log(myAtoi(str))
+// console.log("Output: 4193")
 // Explanation: Conversion stops at digit '3' as the next character is not a numerical digit.
 // PASSES TESTS
 

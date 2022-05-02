@@ -20,48 +20,9 @@ Constraints:
 */
 
 var strStr = function(haystack, needle) {
-  if (!needle.length && !haystack.length) return 0;
-  // flag for if we have a match
-  let match = false;
-  // keeping track of the index where the first instance of needle appears in haystack
-  let firstMatch = null;
-  // TODO - Add the logic for matchingString in the function
-  // building the matching string from each letter in haystack.
-  let matchingString = "";
-  // when matchingString equals needle, return firstMatch
-  for (let i = 0; i < haystack.length; i++) {
-    // console.log(haystack[i])
-    for (let j = 0; j < needle.length; j++) {
-      if (needle[j] === haystack[i] && match === false) {
-        console.log('we have a match')
-        match = true;
-        firstMatch = i;
-        matchingString = matchingString.concat(haystack[i]);
-        // console.log(matchingString)
-        break
-      } else if (needle[j] === haystack[i] && match === true) {
-        // console.log(i)
-        // console.log(j)
-        console.log('we have a matching next letter');
-        matchingString = matchingString.concat(haystack[i]);
-        console.log(matchingString);
-        break
-      } else if (needle[j] !== haystack[i] && match === true &&matchingString === needle) {
-        match = false;
-        console.log("we don't have anymore matching letters")
-      }
-    }
-  }
-  if (match === false) {
-    // console.log('no matches')
-    return -1
-  } else if (haystack.length === 0 && needle.length === 0) {
-    // console.log('empty strings')
-    return 0
-  } else {
-    // console.log('first match')
-    return firstMatch
-  }  
+  let firstIndex = 0;
+
+  return firstIndex;
 };
 
 

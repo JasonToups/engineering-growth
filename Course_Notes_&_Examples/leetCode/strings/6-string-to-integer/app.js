@@ -98,28 +98,21 @@ var myAtoi = function(s) {
   firstChar()
   isNegativeChar()
 
-  // TODO - create case where the integer begins, but encounters a non-number, then should break out of the loop
   while (index < array.length) {
     if (integerBegins && isNaN(parseInt(array[index]))){
-      // BUG - this is not working
-      return integer 
+      spliceEnd = index - 1
     } else if (!integerBegins && isNaN(parseInt(array[index]))){
-      // console.log('returning 0')
       integer = 0;
       return integer 
     } else if (!isNaN(parseInt(array[index])) && index === 0){
-      // console.log('beginning integer')
       integerBegins = true;
     } else if (!integerBegins && !isNaN(parseInt(array[index])) && spliceStart === 0) {
-      // console.log('setting spliceStart & integerBegins')
       spliceStart = index;
       integerBegins = true;
-      console.log(array[index])
       if (index === array.length - 1){
         spliceEnd = index;
       }
     } else if (integerBegins && !isNaN(parseInt(array[index]))) {
-      // console.log('setting spliceEnd')
       spliceEnd = index;
     }
     index++;
@@ -129,13 +122,9 @@ var myAtoi = function(s) {
     integer = parseInt(array.slice(spliceStart, spliceEnd + 1).join(""));
   }
   
-  
   if (isNegative) {
     integer = -integer;
   }
-  // console.log(isNegative)
-  // console.log(spliceStart)
-  // console.log(spliceEnd)
 
   outOfBounds(integer)
 

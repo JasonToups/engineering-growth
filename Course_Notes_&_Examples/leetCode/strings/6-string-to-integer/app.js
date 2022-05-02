@@ -28,24 +28,81 @@ Constraints:
  * @param {string} s
  * @return {number}
  */
-var myAtoi = function(s) {
-  let integer = 0;
 
+/* 
+PLAN
+Convert string to array
+
+Read in next the characters until the next non-digit character or the end of the input is reached.
+
+Loop through array.
+  Ignore all leading whitespace until a + or - sign or an integer is encountered.  
+
+  If the current index is a + or -, then update the isNegative variable to reflect that.
+
+  When the first integer is encountered, set the spliceStart variable to the current index.
+
+  When the last consecutive integer is encountered, set the spliceEnd variable to the current index.
+
+  return out of the loop by setting the integer to the parseInt(array.splice(spliceStart, spliceEnd));
+
+
+Check if the integer falls outside of the integer range.
+If the integer is outside of the range, then set the integer to either end of the range.
+
+Return the integer
+*/
+
+var myAtoi = function(s) {
+  let array = s.split("");
+  let index = 0;
+  let integer = 0;
+  let integerBegins = false;
+  let isNegative = false;
+  let spliceStart = 0;
+  let spliceEnd = 0;
+  console.log(array);
+  // See if we can parseInt from the start & return a number. This would account for strings that are just numbers
+  while (index < array.length) {
+    if (!isNaN(parseInt(array[index])) && index === 0){
+      console.log('beginning integer')
+      integerBegins = true;
+    } else if (array[index] === '-'){
+      isNegative = true;
+    } else if (array[index] === '+') {
+      isNegative = false;
+    } else if (!isNaN(parseInt(array[index])) && spliceStart === 0 && !integerBegins) {
+      console.log('setting spliceStart & integerBegins')
+      spliceStart = index;
+      integerBegins = true;
+    } else if (!isNaN(parseInt(array[index])) && integerBegins) {
+      console.log('setting spliceEnd')
+      spliceEnd = index;
+    }
+    index++;
+  }
+  integer = parseInt(array.slice(spliceStart, spliceEnd + 1).join(""));
+  if (isNegative) {
+    integer = -integer;
+  }
+  console.log(isNegative)
+  console.log(spliceStart)
+  console.log(spliceEnd)
   return integer;
 };
 
  /* Test Cases */
 //  Example 1:
 var str = "42"
-console.log("should be 42")
-console.log(myAtoi(str), typeof(myAtoi(str)))
-console.log("Output: 42")
+// console.log("should be 42")
+// console.log(myAtoi(str), typeof(myAtoi(str)))
+// console.log("Output: 42")
 
 // Example 2:
 var str = "   -42"
 console.log(str)
 console.log("example 2 should be -42")
-console.log(myAtoi(str), typeof(myAtoi(str)))
+console.log(myAtoi(str))
 console.log("Output: -42")
 // Explanation: The first non-whitespace character is '-', which is the minus sign. Then take as many numerical digits as possible, which gets 42.
 // PASSES TESTS
@@ -53,22 +110,22 @@ console.log("Output: -42")
 // Example 3:
 var str = "4193 with words"
 console.log("example 3 should be 4193")
-console.log(myAtoi(str), typeof(myAtoi(str)))
+console.log(myAtoi(str))
 console.log("Output: 4193")
 // Explanation: Conversion stops at digit '3' as the next character is not a numerical digit.
 // PASSES TESTS
 
 // Example 4:
 var str = "words and 987"
-console.log("example 4 should be 0")
-console.log(myAtoi(str))
-console.log("Output: 0")
+// console.log("example 4 should be 0")
+// console.log(myAtoi(str))
+// console.log("Output: 0")
 // Explanation: The first non-whitespace character is 'w', which is not a numerical digit or a +/- sign. Therefore no valid conversion could be performed.
 
 // Example 5:
 var str = "-91283472332"
-console.log("example 5 should be -2147483648")
-console.log(myAtoi(str))
+// console.log("example 5 should be -2147483648")
+// console.log(myAtoi(str))
 // Output: -2147483648
 // Explanation: The number "-91283472332" is out of the range of a 32-bit signed integer. Thefore INT_MIN (−231) is returned.
 // PASSES TESTS
@@ -76,33 +133,33 @@ console.log(myAtoi(str))
 //  Example 6:
 var str = "3.14159"
 // Output:
-console.log("example 6 should be 3")
-console.log(myAtoi(str))
+// console.log("example 6 should be 3")
+// console.log(myAtoi(str))
 
 //  Example 7:
 var str = "+-12"
 // Output:
-console.log("example 7 should be 0")
-console.log(myAtoi(str))
+// console.log("example 7 should be 0")
+// console.log(myAtoi(str))
 
 //  Example 8:
 var str = "00000-42a1234"
 // Output:
-console.log("example 8 should be 0")
-console.log(myAtoi(str))
+// console.log("example 8 should be 0")
+// console.log(myAtoi(str))
 
 // Example 9:
 var str = " "
 // Output:
-console.log(str)
-console.log("example 9 should be 0")
-console.log(myAtoi(str))
+// console.log(str)
+// console.log("example 9 should be 0")
+// console.log(myAtoi(str))
 
 // Example 10:
 var str = "   +0 123"
 // Output:
-console.log(str)
-console.log("example 10 should be 0")
-console.log(myAtoi(str))
+// console.log(str)
+// console.log("example 10 should be 0")
+// console.log(myAtoi(str))
 
 

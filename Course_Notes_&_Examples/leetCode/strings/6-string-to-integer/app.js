@@ -63,17 +63,16 @@ var myAtoi = function(s) {
   let spliceEnd = 0;
 
   function outOfBounds(number) {
-    if (number < Math.pow(-2^31)) {
-      integer = -2^31
-    } else if (number > Math.pow(2^31)){
-      integer = 2^31
+    if (number <= -(Math.pow(2,31))) {
+      integer = -(Math.pow(2,31))
+    } else if (number >= (Math.pow(2,31)) - 1){
+      integer = (Math.pow(2,31)) - 1
     }
   }
 
-  function firstChar (array, index) {
+  function firstChar () {
     while (index < array.length) {
       if (array[index] !== " "){
-        console.log(array[index])
         return true;
       }
       index++;
@@ -81,98 +80,67 @@ var myAtoi = function(s) {
     return false;
   }
 
-  firstChar(array, index)
-
-
-  while (index < array.length) {
-    // TODO write check for this:
-    // The first non-whitespace character is 'w', which is not a numerical digit or a +/- sign. Therefore no valid conversion could be performed.
-    if (integerBegins && isNaN(parseInt(array[index]))){
-      break 
-    } else if (!isNaN(parseInt(array[index])) && index === 0){
-      console.log('beginning integer')
-      integerBegins = true;
-    } else if (array[index] === '-'){
+  function isNegativeChar () {
+    if (array[index] === '-'){
       isNegative = true;
+      index++
     } else if (array[index] === '+') {
       isNegative = false;
+      index++
+    }
+  }
+
+  if (s.length === 0) {
+    console.log('length is 0')
+    return 0;
+  }
+
+  firstChar()
+  isNegativeChar()
+
+  // TODO - create case where the integer begins, but encounters a non-number, then should break out of the loop
+  while (index < array.length) {
+    if (integerBegins && isNaN(parseInt(array[index]))){
+      // BUG - this is not working
+      return integer 
+    } else if (!integerBegins && isNaN(parseInt(array[index]))){
+      // console.log('returning 0')
+      integer = 0;
+      return integer 
+    } else if (!isNaN(parseInt(array[index])) && index === 0){
+      // console.log('beginning integer')
+      integerBegins = true;
     } else if (!integerBegins && !isNaN(parseInt(array[index])) && spliceStart === 0) {
       // console.log('setting spliceStart & integerBegins')
       spliceStart = index;
       integerBegins = true;
+      console.log(array[index])
+      if (index === array.length - 1){
+        spliceEnd = index;
+      }
     } else if (integerBegins && !isNaN(parseInt(array[index]))) {
       // console.log('setting spliceEnd')
       spliceEnd = index;
     }
     index++;
   }
+
+  if (integerBegins) {
+    integer = parseInt(array.slice(spliceStart, spliceEnd + 1).join(""));
+  }
   
   
-  integer = parseInt(array.slice(spliceStart, spliceEnd + 1).join(""));
   if (isNegative) {
     integer = -integer;
   }
-  console.log(isNegative)
-  console.log(spliceStart)
-  console.log(spliceEnd)
+  // console.log(isNegative)
+  // console.log(spliceStart)
+  // console.log(spliceEnd)
 
   outOfBounds(integer)
 
   return integer;
 };
-
-// Working for some test cases
-// var myAtoi = function(s) {
-//   let array = s.split("");
-//   let index = 0;
-//   let integer = 0;
-//   let integerBegins = false;
-//   let isNegative = false;
-//   let spliceStart = 0;
-//   let spliceEnd = 0;
-
-//   while (index < array.length) {
-//     // TODO write check for this:
-//     // The first non-whitespace character is 'w', which is not a numerical digit or a +/- sign. Therefore no valid conversion could be performed.
-//     if (isNaN(parseInt(array[index])) && integerBegins){
-//       break 
-//     } else if (!isNaN(parseInt(array[index])) && index === 0){
-//       console.log('beginning integer')
-//       integerBegins = true;
-//     } else if (array[index] === '-'){
-//       isNegative = true;
-//     } else if (array[index] === '+') {
-//       isNegative = false;
-//     } else if (!isNaN(parseInt(array[index])) && spliceStart === 0 && !integerBegins) {
-//       // console.log('setting spliceStart & integerBegins')
-//       spliceStart = index;
-//       integerBegins = true;
-//     } else if (!isNaN(parseInt(array[index])) && integerBegins) {
-//       console.log('setting spliceEnd')
-//       spliceEnd = index;
-//     }
-//     index++;
-//   }
-//   integer = parseInt(array.slice(spliceStart, spliceEnd + 1).join(""));
-//   if (isNegative) {
-//     integer = -integer;
-//   }
-//   console.log(isNegative)
-//   console.log(spliceStart)
-//   console.log(spliceEnd)
-
-//   function outOfBounds(number) {
-//     if (number < Math.pow(-2^31)) {
-//       integer = -2^31
-//     } else if (number > Math.pow(2^31)){
-//       integer = 2^31
-//     }
-//   }
-
-//   outOfBounds(integer)
-
-//   return integer;
-// };
 
  /* Test Cases */
 //  Example 1:
@@ -183,15 +151,16 @@ var str = "42"
 
 // Example 2:
 var str = "   -42"
-console.log(str)
-console.log("example 2 should be -42")
-console.log(myAtoi(str))
-console.log("Output: -42")
+// console.log(str)
+// console.log("example 2 should be -42")
+// console.log(myAtoi(str))
+// console.log("Output: -42")
 // Explanation: The first non-whitespace character is '-', which is the minus sign. Then take as many numerical digits as possible, which gets 42.
 // PASSES TESTS
 
 // Example 3:
 var str = "4193 with words"
+// console.log(str)
 // console.log("example 3 should be 4193")
 // console.log(myAtoi(str))
 // console.log("Output: 4193")
@@ -211,7 +180,19 @@ var str = "-91283472332"
 // console.log(myAtoi(str))
 // Output: -2147483648
 // Explanation: The number "-91283472332" is out of the range of a 32-bit signed integer. Thefore INT_MIN (−231) is returned.
-// PASSES TESTS
+
+
+var str = "+1"
+// console.log(str)
+// console.log("should be 1")
+// console.log(myAtoi(str))
+
+var str = "-5-"
+console.log(str)
+console.log("-5")
+console.log(myAtoi(str))
+
+
 
 //  Example 6:
 var str = "3.14159"

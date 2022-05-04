@@ -17,6 +17,14 @@ Use the modulus operator to check all of the numbers from 1 - input to see if th
 
 function multiplesThreeFive (number) {
   let sum = 0;
+  let index = 0;
+  while (index < number) {
+    if (index%3 === 0 || index%5 === 0 ){
+      sum += index;
+    }
+    index++
+  }
+
 	return sum;
 };
 
@@ -30,5 +38,5 @@ console.log(multiplesThreeFive(n))
 
 
 var n = 1000
-// console.log(multiplesThreeFive(n))
-// Output: "?"
+console.log(multiplesThreeFive(n))
+// Output: "233168"

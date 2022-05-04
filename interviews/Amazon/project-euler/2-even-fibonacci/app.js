@@ -16,6 +16,8 @@ Only add the even numbers in the sequence.
 I don't know what number to pass into the function.
 Is it 10?
 Or 4 million?
+
+TODO - Research Fibonacci sequence.
 */
 
 function evenFibonacci (number) {

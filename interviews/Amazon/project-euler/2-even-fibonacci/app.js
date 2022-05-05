@@ -22,37 +22,34 @@ I don't know what number to pass into the function.
 Is it 10?
 Or 4 million?
 
-TODO - Research Fibonacci sequence.
+I had to look this one up, I don't think I truly understood what they were asking, so I couldn't solve it myself.
+
 */
 
-function evenFibonacci (number) {
-  let sum = 0;
-  let index = 0;
-  let previousIndex = 0;
-  while (index <= number) {
-    // this is correctly tracking the current & previous index
-    if (index % 2 === 0) {
-      sum += index + previousIndex;
-      previousIndex = index;
-      index++
-    } else {
-      index++
+function fiboEvenSum(number) {
+  let previous = 0;
+  let current = 1;
+  let result = 0;
+  for (let i=0; ; i++) {
+    const next = previous + current;
+    if (next > number){
+      break;
     }
-    
+    if (next % 2 === 0) {
+      result += next;
+    }
+    previous = current;
+    current = next;
   }
+  return result;
+}
 
-	return sum;
-};
-
-
-
-
-var n = 10
-console.log(evenFibonacci(n))
+var n = 34
+console.log(fiboEvenSum(n))
 // Output: "23"
 // Explanation: The sum of all multiples of 3 or 5 below 10 is 23
 
 
 var n = 4000000
-console.log(evenFibonacci(n))
+console.log(fiboEvenSum(n))
 console.log("Output should be: 4613732")

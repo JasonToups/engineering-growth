@@ -185,8 +185,8 @@ class SinglyLinkedList {
 }
 
 var list = new SinglyLinkedList()
-list.push("HELLO")
-list.push("GOODBYE")
-list.push("!")
-list.push("<3")
-list.push(":)")
+
+list.push(100)
+list.push(201)
+list.push(250)
+list.push(350)

@@ -1,8 +1,6 @@
 /* 
 Implement strStr()
 
-Implement strStr().
-
 Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 
 Clarification:
@@ -19,9 +17,86 @@ Constraints:
 
 */
 
-var strStr = function(haystack, needle) {
-  let firstIndex = 0;
+/* 
+Inputs:
+haystack - string
+needle - string
 
+Plan:
+Haystack is the string we are searching in.
+Needle is the string we are searching for.
+
+Convert both haystack and needle to an array, and convert each letter to lowercase.
+
+We need a two pointer approach for this:
+1 for the haystack array index
+1 for the needle array index
+
+Loop through the haystack array, using a while loop that ends when we reach the end of the haystack array.
+
+  If the current letter in the haystack array matches the first letter of the needle array, then we check the rest of the needle array.
+  If the the current letter of the needle array does not match the current letter of the haystack array, then we move on to the next letter in the haystack array.
+
+Return:
+When the needle array is empty, return 0.
+When the needle array is not empty, & doesn't exist in the haystack return -1.
+When the needle array exists in the haystack, return the index of the first occurrence of the needle array in the haystack.
+
+*/
+
+var strStr = function(haystack, needle) {
+  // Check for immediate negative conditions
+  if (needle === '') {
+    return 0;
+  } else if (needle.length > haystack.length) {
+    return -1;
+  }
+  // setup return index
+  let firstIndex = 0;
+  // setup pointers
+  let haystackIndex = 0;
+  let needleIndex = 0;
+  // convert haystack & needle to an array
+  let haystackArray = haystack.split('');
+  let needleArray = needle.split('');
+
+  while (haystackIndex < haystackArray.length) {
+    if (haystackArray[haystackIndex] === needleArray[needleIndex]) {
+      firstIndex = haystackIndex;
+      needleIndex = 0;
+      console.log(firstIndex)
+      console.log(`Haystack Slice: ${haystackArray.slice(haystackIndex, haystackIndex + needleArray.length)}`);
+      console.log(`Needle Array: ${needleArray}`);
+      console.log(`Haystack Index: ${haystackIndex}`);
+      console.log(`Needle Index: ${needleIndex}`);
+      // we need to scope a loop here to check the rest of needleArray
+      // if there are any letters that do not match, we need to break out of the loop and set the needleIndex to 0.
+      while (needleIndex < needleArray.length) {
+        if (needleArray[needleIndex] === haystackArray[haystackIndex]) {
+          console.log(`We have a match: ${haystackArray[haystackIndex]} === ${needleArray[needleIndex]}`)
+          if (needleIndex === needleArray.length - 1) {
+            return firstIndex;
+          }
+          needleIndex++;
+          haystackIndex++;
+          console.log(`Haystack Index - increment: ${haystackIndex}`);
+          console.log(`Needle Index - increment: ${needleIndex}`);
+        } else {
+          console.log(`We are breaking: ${haystackArray[haystackIndex]} === ${needleArray[needleIndex]}`)
+          console.log(`Haystack Index - increment: ${haystackIndex}`);
+          console.log(`Needle Index - increment: ${needleIndex}`);
+          console.log('break')
+          needleIndex = 0;
+          haystackIndex = firstIndex + 1;
+          break;
+        }
+      }
+    } else if (haystackIndex === haystackArray.length - 1) {
+      return -1;
+    }
+    haystackIndex++
+  }
+  
   return firstIndex;
 };
 
@@ -29,7 +104,7 @@ var strStr = function(haystack, needle) {
 // Testing
 
 // Example 1:
-let haystack1 = "hello";
+/* let haystack1 = "hello";
 let needle1 = "ll";
 // needle1 is included in haystack1 at index 2
 // Output: 2
@@ -52,20 +127,20 @@ let needle3 = "";
 console.log("output 3 should be 0");
 console.log(strStr(haystack3, needle3));
 
-/* Marco's solution
+// Example:
+var haystack = "aaa";
+var needle = "aaaa";
+// Needle length is longer than haystack length.
+// Output: -1
+console.log("output should be -1");
+console.log(strStr(haystack, needle)); */
 
-const strStr = (haystack, needle) => {
-  if (!needle.length && !haystack.length) return 0;
-  let last = needle.length;
-  let solved = false;
-  for (let i = 0; i < haystack.length; i++) {
-    let chunk = haystack.slice(i, last);
-    // console.log(chunk);
-    if (chunk === needle) {
-      solved = true;
-      return i;
-    }
-    last++;
-  }
-  if (!solved) return -1;
-}; */
+// Example:
+var haystack = "mississippi";
+var needle = "issip";
+// Needle length is longer than haystack length.
+// Output: -1
+console.log(`Haystack: ${haystack}`);
+console.log(`Needle: ${needle}`);
+console.log("output should be 4");
+console.log(strStr(haystack, needle));

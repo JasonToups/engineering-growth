@@ -64,7 +64,7 @@ var strStr = function(haystack, needle) {
     if (haystackArray[haystackIndex] === needleArray[needleIndex]) {
       firstIndex = haystackIndex;
       needleIndex = 0;
-      console.log(firstIndex)
+      console.log(`First Index updated ${firstIndex}`)
       console.log(`Haystack Slice: ${haystackArray.slice(haystackIndex, haystackIndex + needleArray.length)}`);
       console.log(`Needle Array: ${needleArray}`);
       console.log(`Haystack Index: ${haystackIndex}`);
@@ -74,15 +74,16 @@ var strStr = function(haystack, needle) {
       while (needleIndex < needleArray.length) {
         if (needleArray[needleIndex] === haystackArray[haystackIndex]) {
           console.log(`We have a match: ${haystackArray[haystackIndex]} === ${needleArray[needleIndex]}`)
+          // BUG - this is not working and returning the first Index too early
           if (needleIndex === needleArray.length - 1) {
             return firstIndex;
           }
           needleIndex++;
           haystackIndex++;
-          console.log(`Haystack Index - increment: ${haystackIndex}`);
-          console.log(`Needle Index - increment: ${needleIndex}`);
+          console.log(`Haystack Index - increment: ${haystackArray[haystackIndex]} ${haystackIndex}`);
+          console.log(`Needle Index - increment: ${needleArray[needleIndex]}${needleIndex}`);
         } else {
-          console.log(`We are breaking: ${haystackArray[haystackIndex]} === ${needleArray[needleIndex]}`)
+          console.log(`We are breaking: ${haystackArray[haystackIndex]} != ${needleArray[needleIndex]}`)
           console.log(`Haystack Index - increment: ${haystackIndex}`);
           console.log(`Needle Index - increment: ${needleIndex}`);
           console.log('break')
@@ -90,14 +91,12 @@ var strStr = function(haystack, needle) {
           haystackIndex = firstIndex + 1;
           break;
         }
+        haystackIndex++
       }
-    } else if (haystackIndex === haystackArray.length - 1) {
-      return -1;
     }
     haystackIndex++
   }
-  
-  return firstIndex;
+  return -1;
 };
 
 
@@ -133,14 +132,29 @@ var needle = "aaaa";
 // Needle length is longer than haystack length.
 // Output: -1
 console.log("output should be -1");
-console.log(strStr(haystack, needle)); */
+console.log(strStr(haystack, needle)); 
 
 // Example:
 var haystack = "mississippi";
 var needle = "issip";
-// Needle length is longer than haystack length.
-// Output: -1
 console.log(`Haystack: ${haystack}`);
 console.log(`Needle: ${needle}`);
 console.log("output should be 4");
+console.log(strStr(haystack, needle));
+
+// Example:
+var haystack = "mississippi";
+var needle = "issipi";
+console.log(`Haystack: ${haystack}`);
+console.log(`Needle: ${needle}`);
+console.log("output should be -1");
+console.log(strStr(haystack, needle));
+*/
+
+// Example:
+var haystack = "mississippi";
+var needle = "pi";
+console.log(`Haystack: ${haystack}`);
+console.log(`Needle: ${needle}`);
+console.log("output should be 9");
 console.log(strStr(haystack, needle));

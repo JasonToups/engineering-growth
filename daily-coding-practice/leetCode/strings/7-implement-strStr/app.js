@@ -60,38 +60,29 @@ var strStr = function(haystack, needle) {
   let haystackArray = haystack.split('');
   let needleArray = needle.split('');
 
-  while (haystackIndex < haystackArray.length) {
+  while (haystackIndex <= haystackArray.length - needleArray.length) {
+    
     if (haystackArray[haystackIndex] === needleArray[needleIndex]) {
+      // TODO - Could turn this validation into a function that returns true or false.
       firstIndex = haystackIndex;
+      // console.log(`First Index updated ${firstIndex}`)
       needleIndex = 0;
-      console.log(`First Index updated ${firstIndex}`)
-      console.log(`Haystack Slice: ${haystackArray.slice(haystackIndex, haystackIndex + needleArray.length)}`);
-      console.log(`Needle Array: ${needleArray}`);
-      console.log(`Haystack Index: ${haystackIndex}`);
-      console.log(`Needle Index: ${needleIndex}`);
-      // we need to scope a loop here to check the rest of needleArray
-      // if there are any letters that do not match, we need to break out of the loop and set the needleIndex to 0.
+      // Create a slice from the haystackArray, since it will be easier to compare the arrays, using the same index
+      // Creating the slice slows runtime & increases memory usage.
+      // TODO - Optimize this.
+      let haystackSlice = haystackArray.slice(haystackIndex, haystackIndex + needleArray.length);
+      
+      // Then we loop through the haystackSlice array, and check if the current letter of the haystackSlice array matches the current letter of the needle array.
       while (needleIndex < needleArray.length) {
-        if (needleArray[needleIndex] === haystackArray[haystackIndex]) {
-          console.log(`We have a match: ${haystackArray[haystackIndex]} === ${needleArray[needleIndex]}`)
-          // BUG - this is not working and returning the first Index too early
+        if (haystackSlice[needleIndex] === needleArray[needleIndex]) {
           if (needleIndex === needleArray.length - 1) {
-            return firstIndex;
+            return firstIndex
           }
           needleIndex++;
-          haystackIndex++;
-          console.log(`Haystack Index - increment: ${haystackArray[haystackIndex]} ${haystackIndex}`);
-          console.log(`Needle Index - increment: ${needleArray[needleIndex]}${needleIndex}`);
         } else {
-          console.log(`We are breaking: ${haystackArray[haystackIndex]} != ${needleArray[needleIndex]}`)
-          console.log(`Haystack Index - increment: ${haystackIndex}`);
-          console.log(`Needle Index - increment: ${needleIndex}`);
-          console.log('break')
           needleIndex = 0;
-          haystackIndex = firstIndex + 1;
           break;
         }
-        haystackIndex++
       }
     }
     haystackIndex++

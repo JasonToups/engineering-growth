@@ -19,6 +19,14 @@ Array of Strings, of various sizes
 Outputs:
 String - longest common prefix from the array of strings
 
+Test Cases:
+Success - ["flower","flow","flight"]
+Failure - ["dog","racecar","car"]
+
+Edge Cases:
+Failure - [""] - if the array length is 0, return an empty string
+Success - ["a"] - if the array length is 1, return the first string
+
 PLAN:
 We don't need to split the strings into arrays, we can just compare the first letter of each string, using bracket notation.
 
@@ -33,6 +41,10 @@ Pointers:
 
 Return Variable:
 1. returnString - The return variable will be the longest common prefix.
+
+Early Return:
+If the array length is 0, return an empty string.
+If the array length is 1, return the first string.
 
 Loop: 
 Loop through the array of strings.
@@ -81,6 +93,13 @@ console.log(longestCommonPrefix(strs))
 strs = ["a"]
 console.log(strs);
 console.log('Output: a');
+console.log(longestCommonPrefix(strs))
+// Output: "a"
+
+// Example 4:;
+strs = [""]
+console.log(strs);
+console.log('Output: ""');
 console.log(longestCommonPrefix(strs))
 // Output: "a"
 

@@ -60,46 +60,86 @@ The end condition of the loop is stringIndex < array[0].length.
 
 */
 
-var longestCommonPrefix = function(strs) {
+function longestCommonPrefix (strs) {
   // Check for immediate negative conditions
   if (strs.length === 0) {
     return '';
+  } else if (strs.length === 1) {
+    return strs[0];
   }
 
   // Setup return string
   let returnString = '';
   // Setup pointers
-  let strsIndex = 0;
-  let returnIndex = 0;
+  let arrayIndex = 0;
+  let stringIndex = 0;
+  let hasPrefix = true;
 
-  
+  while (hasPrefix) {
+   if (stringIndex > strs[arrayIndex].length - 1) {
+     console.log('stringIndex > strs[arrayIndex].length - 1')
+     hasPrefix = false;
+    } else if (strs[arrayIndex][stringIndex] === strs[arrayIndex + 1][stringIndex] && arrayIndex <= strs[0].length - 2) {
+      if (arrayIndex === strs.length - 2) {
+        returnString += strs[arrayIndex][stringIndex];
+        arrayIndex = 0;
+        stringIndex++;
+      } else {
+        arrayIndex++;
+      }
+      // console.log(strs[arrayIndex][stringIndex]);
+    } else {
+      console.log('else hasPrefix = false');
+      hasPrefix = false;
+    }
+  }
+  return returnString;
 };
 
-//Example 1:
+/* TESTS */
 
-var strs = ["flower","flow","flight"]
+/* var strs = ["flower","flow","flight"]
 console.log(strs);
 console.log("Output: fl");
 console.log(longestCommonPrefix(strs));
 
-// Example 2:
 strs = ["dog","racecar","car"]
 console.log(strs);
 console.log('Output: ""');
 console.log(longestCommonPrefix(strs))
 // Explanation: There is no common prefix among the input strings.
 
-// Example 3;
+strs = ["ab", "a"]
+console.log(strs.length);
+console.log(strs);
+console.log('Output: a');
+console.log(longestCommonPrefix(strs)) */
+
+strs = ["flower","flower","flower","flower"]
+console.log(strs.length);
+console.log(strs);
+console.log('Output: flower');
+console.log(longestCommonPrefix(strs))
+
+strs = ["c","c"]
+console.log(strs.length);
+console.log(strs);
+console.log('Output: c');
+console.log(longestCommonPrefix(strs))
+
+
+/* // Example 3 - passed;
 strs = ["a"]
 console.log(strs);
 console.log('Output: a');
 console.log(longestCommonPrefix(strs))
 // Output: "a"
 
-// Example 4:;
+// Example 4 - passed;
 strs = [""]
 console.log(strs);
 console.log('Output: ""');
 console.log(longestCommonPrefix(strs))
 // Output: "a"
 
+ */

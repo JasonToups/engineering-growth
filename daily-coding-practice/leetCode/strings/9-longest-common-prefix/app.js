@@ -68,11 +68,12 @@ function longestCommonPrefix (strs) {
     return strs[0];
   }
 
-  // Setup return string
+  // return string
   let returnString = '';
-  // Setup pointers
+  // pointers
   let arrayIndex = 0;
   let stringIndex = 0;
+  // Loop break flag
   let hasPrefix = true;
 
   while (hasPrefix) {
@@ -89,6 +90,7 @@ function longestCommonPrefix (strs) {
       }
       // console.log(strs[arrayIndex][stringIndex]);
     } else {
+      // BUG - debugging the ["c","c"] case, since it returns early here.
       console.log('else hasPrefix = false');
       hasPrefix = false;
     }

@@ -48,111 +48,37 @@ If the array length is 1, return the first string.
 
 Loop: 
 Loop through the array of strings.
-At each index, check the stringIndex character of the arrayIndex string & compare that character to the next arrayIndex string at the same stringIndex.
-  If the characters match, then move onto the next string.
-  If the characters don't match, then break the loop.
-  If the final string index is reached, then we have a start of the common prefix.
-    We should save that character to the return string, by setting the return string to a substring of the current string by passing in (0, stringIndex).
-    And we should reset the arrayIndex to 0;
-    And increment the stringIndex by 1.
 
-The end condition of the loop is stringIndex < array[0].length.
+We are going to base all of the comparisons on the first string in the array.
+
+The outer loop will be the string index within the first string in the array.
+The inner loop will be the index of the array of strings.
+
+Starting with the first letter of the first string, compare it to the first letter of the next string.
+If the letters don't match, return the returnString.
+If they do match, keep going through the array of strings, comparing the same letter to the next letter until you reach the last string in the array.
+After reaching the last string in the array, we will add the current stringIndex letter to the return string, & increment the stringIndex, and loop through the array again.
 
 */
 
-function longestCommonPrefix (stringsArray) {
-  // Check for immediate negative conditions
-  if (stringsArray.length === 0) {
-    return '';
-  } else if (stringsArray.length === 1) {
-    return stringsArray[0];
-  }
-
-  // return string
+var longestCommonPrefix = function(stringsArray) {
+  if (stringsArray.length === 0) return '';
   let returnString = '';
-  // pointers
-  let arrayIndex = 0;
-  let stringIndex = 0;
-  // Loop break flag
-  let hasPrefix = true;
-
-  while (hasPrefix) {
-    if (stringIndex > stringsArray[arrayIndex].length - 1) {
-      console.log('stringIndex > stringsArray[arrayIndex].length - 1')
-      hasPrefix = false;
-    } 
-    else if (stringsArray[arrayIndex][stringIndex] === stringsArray[arrayIndex + 1][stringIndex] && arrayIndex <= stringsArray[0].length - 2) {
-      if (arrayIndex === stringsArray.length - 2) {
-        returnString += stringsArray[arrayIndex][stringIndex];
-        arrayIndex = 0;
-        stringIndex++;
+  for (let stringIndex = 0; stringIndex < stringsArray[0].length; stringIndex++) {
+    for (let arrayIndex = 1; arrayIndex < stringsArray.length; arrayIndex++) {
+      if (stringsArray[0][stringIndex] !== stringsArray[arrayIndex][stringIndex]) {
+        return returnString;
       }
-      else {
-        arrayIndex++;
-      }
-      // console.log(stringsArray[arrayIndex][stringIndex]);
     }
-    else {
-      // BUG - debugging the ["c","c"] case, since it returns early here.
-      console.log('else hasPrefix = false');
-      hasPrefix = false;
-    }
+    returnString += stringsArray[0][stringIndex];
   }
   return returnString;
 };
 
-/* 
-Possible nested 2 while loops
-function longestCommonPrefix (stringsArray) {
-  // Check for immediate negative conditions
-  if (stringsArray.length === 0) {
-    return '';
-  } else if (stringsArray.length === 1) {
-    return stringsArray[0];
-  }
-
-  // return string
-  let returnString = '';
-  // pointers
-  let arrayIndex = 0;
-  let stringIndex = 0;
-  // Loop break flag
-  let hasPrefix = true;
-
-  while (hasPrefix) {
-    // create a while loop that only loops through the stringsArray
-    while (arrayIndex <= stringsArray.length - 2) {
-      // check the current stringIndex character of the arrayIndex string & compare that character to the next arrayIndex string at the same stringIndex.
-      // this is the end condition of the loop
-      if (stringsArray[arrayIndex][stringIndex] === stringsArray[arrayIndex + 1][stringIndex]) {
-        if (arrayIndex === stringsArray.length - 2) {
-          // if the characters match, and we're at the end of the comparison, then we have a start of the common prefix.
-          returnString += stringsArray[arrayIndex][stringIndex];
-          // start the loop over again
-          arrayIndex = 0;
-          // compare the next stringIndex
-          stringIndex++;
-        } 
-        else {
-          // if the characters match, then move onto the next string.
-          arrayIndex++;
-        }
-      }
-      else {
-        // if the characters don't match, then break the loop.
-        hasPrefix = false;
-        break;
-      }
-      console.log(arrayIndex)
-    }
-  return returnString;
-}; 
-*/
-
 
 /* TESTS */
 
-/* var stringsArray = ["flower","flow","flight"]
+var stringsArray = ["flower","flow","flight"]
 console.log(stringsArray);
 console.log("Output: fl");
 console.log(longestCommonPrefix(stringsArray));
@@ -167,7 +93,7 @@ stringsArray = ["ab", "a"]
 console.log(stringsArray.length);
 console.log(stringsArray);
 console.log('Output: a');
-console.log(longestCommonPrefix(stringsArray)) */
+console.log(longestCommonPrefix(stringsArray)) 
 
 stringsArray = ["flower","flower","flower","flower"]
 console.log(stringsArray.length);
@@ -181,8 +107,7 @@ console.log(stringsArray);
 console.log('Output: c');
 console.log(longestCommonPrefix(stringsArray))
 
-
-/* // Example 3 - passed;
+// Example 3 - passed;
 stringsArray = ["a"]
 console.log(stringsArray);
 console.log('Output: a');
@@ -195,5 +120,3 @@ console.log(stringsArray);
 console.log('Output: ""');
 console.log(longestCommonPrefix(stringsArray))
 // Output: "a"
-
- */

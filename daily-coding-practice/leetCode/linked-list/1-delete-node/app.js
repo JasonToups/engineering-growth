@@ -23,6 +23,10 @@ Input: head = [4,5,1,9], node = 1
 Output: [4,5,9]
 Explanation: You are given the third node with value 1, the linked list should become 4 -> 5 -> 9 after calling your function.
 
+Links:
+https://www.freecodecamp.org/news/implementing-a-linked-list-in-javascript/
+
+
 */
 
 /* 
@@ -45,18 +49,41 @@ PLAN:
 /**
  * Definition for singly-linked list.
  */
-function ListNode(val) {
-  this.val = val;
-  this.next = null;
+class ListNode {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
 }
+
+class LinkedList {
+  constructor(head = null) {
+    this.head = head;
+  }
+}
+
+let node1 = new ListNode(4);
+let node2 = new ListNode(5);
+node1.next = node2;
+let node3 = new ListNode(1);
+node2.next = node3;
+let node4 = new ListNode(9);
+node3.next = node4;
+
+let list = new LinkedList(node1);
+
+console.log(list)
 /**
  * @param {ListNode} node
  * @return {void} Do not return anything, modify node in-place instead.
  */
 
-var deleteNode = function(node) {
-    
+ var deleteNode = function(node) {
+  node.val = node.next.val;
+  node.next = node.next.next;
 };
 
 
 /* TESTS */
+let nodeVal = 5;
+console.log(deleteNode(nodeVal));

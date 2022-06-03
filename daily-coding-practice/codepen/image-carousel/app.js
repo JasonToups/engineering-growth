@@ -1,3 +1,7 @@
+/* Link to the completed CodePen
+https://codepen.io/JasonToups/pen/rNJKjMN
+*/
+
 const dots = document.querySelector('.dots');
 dots.addEventListener('click', e => {
   const target = e.target;

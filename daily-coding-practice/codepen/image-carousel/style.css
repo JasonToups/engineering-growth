@@ -63,6 +63,40 @@ img {
 
 
 .carousel {
+  position: relative;
+}
+
+.carousel .carousel-ui {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 50%;
+  width: 100%;
+}
+
+.carousel-button-left {
+  position: absolute;
+  left: 7px;
+}
+
+.carousel-button-right {
+  position: absolute;
+  right: 7px;
+}
+
+.fa-chevron-left, .fa-chevron-right {
+  font-size: 35px;
+  color: transparent;
+  cursor: pointer;
+}
+
+.carousel:hover .fa-chevron-left, .carousel:hover .fa-chevron-right {
+    color: #6e6e73;
+    opacity: 0.7;
+}
+
+
+.carousel .cards {
   overflow-x: auto;
   overflow-y: show;
   display: flex;
@@ -70,9 +104,10 @@ img {
   scroll-padding: 0 1.5rem;
   margin: 10px 0 0 0;
   padding: 10px 0 20px 0;
+
 }
 
-.carousel .card {
+.carousel .cards .card {
   scroll-snap-align: start;
   display: flex;
   flex-shrink: 0;

@@ -13,3 +13,13 @@ dots.addEventListener('click', e => {
     inline: 'start'
   })
 })
+
+
+let cardCount = $(".carousel").children().length;
+let dot = '<button class="dot"></button>';
+
+(function addDots() {
+  for (let i = 0; i < cardCount; i++) {
+    $('.dots').append(dot);
+  }
+}())

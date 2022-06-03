@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #4c4c4c;
+  color: white;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+span {
+  color: #6e6e73;
+}
+
+h1 {
+  font-size: 65px;
+  line-height: 1.14286;
+  font-weight: 600;
+  letter-spacing: .007em;
+  padding: 22.4px 0 0 10px;
+  width: fit-content;
+}
+
+h2 {
+  font-size: 12px;
+  line-height: 1.33337;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+  color: #6e6e73;
+  margin-bottom: 13px;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 1.14286;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: #1d1d1f;
+  margin-bottom: 13px;
+  text-transform: capitalize;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.23536;
+  font-weight: 400;
+  letter-spacing: -.022em;
+  color: #1d1d1f;
+  margin-bottom: 5px;
+  text-transform: lowercase;
+}
+
+img {
+  border-radius: 5%;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  overflow: hidden;
+  aspect-ratio: 5 / 6;
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #FF7C7C 0%, #F5FF83 25.52%, #9FFF87 51.04%, #79AFFF 78%, #E087FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.cards {
+  overflow-x: auto;
+  overflow-y: show;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 1.5rem;
+  margin: 10px 0 0 0;
+  padding: 10px 0 20px 0;
+
+}
+
+.card {
+  scroll-snap-align: start;
+  display: flex;
+  flex-shrink: 0;
+  padding: 5px 10px 10px 10px;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 7px;
+  background-color: white;
+  border-radius: 5%;
+  overflow: hidden;
+  box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+  transition: all .3s cubic-bezier(0,0,.5,1)
+}
+
+.card:hover {
+  box-shadow: 2px 4px 16px rgba(0,0,0,.16);
+  transform: scale3d(1.01,1.01,1.01)
+}
+
+.card .content{
+  height: 150px;
+  padding: 30px 10px 0 10px;
+}

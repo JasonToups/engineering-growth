@@ -65,7 +65,10 @@ img {
 .carousel {
   position: relative;
 }
-
+/* 
+This is how the ui is positioned absolutely within the carousel.
+https://www.amitmerchant.com/position-children-elements-in-parent-absolutely-using-css/ 
+*/
 .carousel .carousel-ui {
   position: absolute;
   display: flex;

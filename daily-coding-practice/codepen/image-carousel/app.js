@@ -14,6 +14,7 @@ dots.addEventListener('click', e => {
   })
 })
 
+/* BUG - Having the arrow UI & manual scrolling conflicts, since the arrows don't keep up with where the cards are positioned. */
 const scrollRight = document.querySelector('.carousel-button-right');
 let scrollIndex = 0;
 const cardCount = $(".cards").children().length;

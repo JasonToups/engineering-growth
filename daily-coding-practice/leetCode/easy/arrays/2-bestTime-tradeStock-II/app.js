@@ -56,20 +56,20 @@ Should go back and write this from scratch later
 function maxProfit(prices) {
   let maxProfit = 0;
   for (let i = 0; i < prices.length; i++) {
-    console.log(prices)
-    console.log(prices[i])
-    console.log(prices[i - 1])
-      if (prices[i] > prices[i - 1]) {
-          maxProfit += prices[i] - prices[i - 1];
-          console.log(maxProfit)
-      }
+    console.log(prices);
+    console.log(prices[i]);
+    console.log(prices[i - 1]);
+    if (prices[i] > prices[i - 1]) {
+      maxProfit += prices[i] - prices[i - 1];
+      console.log(maxProfit);
+    }
   }
   return maxProfit;
 }
 
 // let array1 = [7, 1, 5, 3, 6, 4]
 // console.log(maxProfit(array1));
-let array2 = [1, 2, 3, 4, 5]
+let array2 = [1, 2, 3, 4, 5];
 console.log(maxProfit(array2));
 // let array3 = [7, 6, 4, 3, 1]
 // console.log(maxProfit(array3));

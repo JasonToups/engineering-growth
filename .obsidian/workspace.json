@@ -11,12 +11,8 @@
             "id": "b4fead95c0a56456",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "courses/current/Udemy/Data_Structures_And_Altorithms/09 - Challenging Recursion Problems/Challenging Recursion Problems.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "courses/current/Udemy/Data_Structures_And_Altorithms/09 - Challenging Recursion Problems/Challenging Recursion Problems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "courses/current/Udemy/Data_Structures_And_Altorithms/09 - Challenging Recursion Problems/Challenging Recursion Problems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "courses/current/Udemy/Data_Structures_And_Altorithms/09 - Challenging Recursion Problems/Challenging Recursion Problems.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -148,41 +140,42 @@
   },
   "active": "b4fead95c0a56456",
   "lastOpenFiles": [
-    "courses/current/Udemy/Data_Structures_And_Altorithms/30 - The Wild West/The Wild West.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/29 - Dynamic Programming/Dynamic Programming.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/28 - Dijkstra's Algorithm/Dijkstra's Algorithm.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/27 - Graph Traversal/Graph Traversal.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/26 - Graphs/Graphs.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/25 - Hash Tables/Hash Tables.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/24 - Binary Heaps/Binary Heaps.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/23 - Tree Traversal/Tree Traversal.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/22 - Binary Search Trees/Binary Search Trees.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/21 - Stacks and Queues/Stacks and Queues.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/20 - Doubly Linked Lists/Doubly Linked Lists.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/17 - Radix Sort/Untitled.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/17 - Radix Sort/Radix Sort.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/30 - The Wild West/Untitled.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/29 - Dynamic Programming/Untitled.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/28 - Dijkstra's Algorithm/Untitled.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/27 - Graph Traversal/Untitled.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/26 - Graphs/Untitled.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/25 - Hash Tables/Untitled.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/24 - Binary Heaps/Untitled.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/23 - Tree Traversal/Untitled.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/22 - Binary Search Trees/Untitled.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/21 - Stacks and Queues/Untitled.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/20 - Doubly Linked Lists/Untitled.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/09 - Challenging Recursion Problems/Challenging Recursion Problems.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/16 - Quick Sort/Quick Sort.md",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/30 - The Wild West",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/29 - Dynamic Programming",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/28 - Dijkstra's Algorithm",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/27 - Graph Traversal",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/26 - Graphs",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/25 - Hash Tables",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/24 - Binary Heaps",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/23 - Tree Traversal",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/22 - Binary Search Trees",
-    "courses/current/Udemy/Data_Structures_And_Altorithms/21 - Stacks and Queues"
+    "courses/current/Udemy/Modern Javascript from the Beginning/JS_Lessons/Section-3_DOMManipulation/3-22_WhatIsTheDOM/3_2_project_files/js_sandbox/js_sandbox/index.html",
+    "courses/current/Udemy/Modern Javascript from the Beginning/JS_Lessons/Section-3_DOMManipulation/3-22_WhatIsTheDOM/3_2_project_files/js_sandbox/js_sandbox/app.js",
+    "courses/current/Udemy/Modern Javascript from the Beginning/JS_Lessons/Section-3_DOMManipulation/3-22_WhatIsTheDOM/3_2_project_files/js_sandbox/js_sandbox",
+    "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/microposts/assets/css/style.css",
+    "courses/current/Udemy/Modern Javascript from the Beginning/JS_Lessons/Section-3_DOMManipulation/3-22_WhatIsTheDOM/3_2_project_files/js_sandbox",
+    "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/microposts/src/ui.js",
+    "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/microposts/src/http.js",
+    "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/microposts/src/app.js",
+    "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/microposts/assets/css",
+    "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/microposts/api/db.json",
+    "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/loancalculator/img/loading.gif",
+    "courses/current/Udemy/Modern Javascript from the Beginning/JS_Lessons/Section-3_DOMManipulation/3-23_ExaminingTheDocumentObject/index.html",
+    "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/microposts/README.md",
+    "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/readme.md",
+    "courses/current/Udemy/Data Structures and Algorithms/General Notes/Sorting Algorithms.md",
+    "courses/current/Udemy/Data Structures and Algorithms/General Notes/Quick Sort.md",
+    "courses/current/Udemy/Data Structures and Algorithms/General Notes/Algorithms & Problem Solving Patterns.md",
+    "courses/current/Udemy/Data Structures and Algorithms/30 - The Wild West/The Wild West.md",
+    "courses/current/Udemy/Data Structures and Algorithms/29 - Dynamic Programming/Dynamic Programming.md",
+    "courses/current/Udemy/Data Structures and Algorithms/28 - Dijkstra's Algorithm/Dijkstra's Algorithm.md",
+    "courses/current/Udemy/Data Structures and Algorithms/27 - Graph Traversal/Graph Traversal.md",
+    "courses/current/Udemy/Data Structures and Algorithms/26 - Graphs/Graphs.md",
+    "courses/current/Udemy/Data Structures and Algorithms/25 - Hash Tables/Hash Tables.md",
+    "courses/current/Udemy/Data Structures and Algorithms/24 - Binary Heaps/Binary Heaps.md",
+    "courses/current/Udemy/Data Structures and Algorithms/23 - Tree Traversal/Tree Traversal.md",
+    "courses/current/Udemy/Data Structures and Algorithms/22 - Binary Search Trees/Binary Search Trees.md",
+    "courses/current/Udemy/Data Structures and Algorithms/21 - Stacks and Queues/Stacks and Queues.md",
+    "courses/current/Udemy/Data Structures and Algorithms/20 - Doubly Linked Lists/Doubly Linked Lists.md",
+    "courses/current/Udemy/Data Structures and Algorithms/19 - Singly Linked Lists/Singly-Linked-List-Intro.md",
+    "courses/current/Udemy/Data Structures and Algorithms/18 - Data Structures Introduction/Data-Structures-Introduction.md",
+    "courses/current/Udemy/Data Structures and Algorithms/17 - Radix Sort/Radix Sort.md",
+    "courses/current/Udemy/Data Structures and Algorithms/16 - Quick Sort/Quick Sort.md",
+    "courses/current/Udemy/Data Structures and Algorithms/15 - Merge Sort/Merge Sort.md",
+    "courses/current/Udemy/Data Structures and Algorithms/14 - Comparing Bubble, Selection, and Insertion Sort/Comparing Bubble, Selection, and Insertion Sort.md",
+    "courses/current/Udemy/Data Structures and Algorithms/13 - Insertion Sort/Insertion Sort.md",
+    "courses/current/Udemy/Data Structures and Algorithms/12 - Selection Sort/Selection Sort.md",
+    "courses/current/Udemy/Data Structures and Algorithms/11 - Bubble Sort/Bubble Sort.md"
   ]
 }

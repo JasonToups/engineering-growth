@@ -1,0 +1,188 @@
+{
+  "main": {
+    "id": "9c72729c9ba27e37",
+    "type": "split",
+    "children": [
+      {
+        "id": "1e967e0ee6f3c059",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b4fead95c0a56456",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "courses/current/Udemy/Data_Structures_And_Altorithms/09 - Challenging Recursion Problems/Challenging Recursion Problems.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c941f443b8e3096c",
+    "type": "split",
+    "children": [
+      {
+        "id": "a017c04d92529b48",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bd9b65d16e122c03",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9eb0b4eb532788d1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1653fa3ef96965cc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 451.5
+  },
+  "right": {
+    "id": "d8e16ce8fa821c8f",
+    "type": "split",
+    "children": [
+      {
+        "id": "d93e01368b394d62",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a1ab009467a06de7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "courses/current/Udemy/Data_Structures_And_Altorithms/09 - Challenging Recursion Problems/Challenging Recursion Problems.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "83943f39c44bd26f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "courses/current/Udemy/Data_Structures_And_Altorithms/09 - Challenging Recursion Problems/Challenging Recursion Problems.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b8674d86480a896f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "6fe27950f8009f7e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "courses/current/Udemy/Data_Structures_And_Altorithms/09 - Challenging Recursion Problems/Challenging Recursion Problems.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "b4fead95c0a56456",
+  "lastOpenFiles": [
+    "courses/current/Udemy/Data_Structures_And_Altorithms/30 - The Wild West/The Wild West.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/29 - Dynamic Programming/Dynamic Programming.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/28 - Dijkstra's Algorithm/Dijkstra's Algorithm.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/27 - Graph Traversal/Graph Traversal.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/26 - Graphs/Graphs.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/25 - Hash Tables/Hash Tables.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/24 - Binary Heaps/Binary Heaps.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/23 - Tree Traversal/Tree Traversal.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/22 - Binary Search Trees/Binary Search Trees.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/21 - Stacks and Queues/Stacks and Queues.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/20 - Doubly Linked Lists/Doubly Linked Lists.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/17 - Radix Sort/Untitled.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/17 - Radix Sort/Radix Sort.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/30 - The Wild West/Untitled.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/29 - Dynamic Programming/Untitled.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/28 - Dijkstra's Algorithm/Untitled.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/27 - Graph Traversal/Untitled.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/26 - Graphs/Untitled.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/25 - Hash Tables/Untitled.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/24 - Binary Heaps/Untitled.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/23 - Tree Traversal/Untitled.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/22 - Binary Search Trees/Untitled.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/21 - Stacks and Queues/Untitled.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/20 - Doubly Linked Lists/Untitled.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/09 - Challenging Recursion Problems/Challenging Recursion Problems.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/16 - Quick Sort/Quick Sort.md",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/30 - The Wild West",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/29 - Dynamic Programming",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/28 - Dijkstra's Algorithm",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/27 - Graph Traversal",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/26 - Graphs",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/25 - Hash Tables",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/24 - Binary Heaps",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/23 - Tree Traversal",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/22 - Binary Search Trees",
+    "courses/current/Udemy/Data_Structures_And_Altorithms/21 - Stacks and Queues"
+  ]
+}

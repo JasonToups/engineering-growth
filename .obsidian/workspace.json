@@ -11,12 +11,8 @@
             "id": "b4fead95c0a56456",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "courses/current/Udemy/Data Structures and Algorithms/02 - Big 0 Notation/Big O Notation.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "courses/current/Udemy/Data Structures and Algorithms/02 - Big 0 Notation/Big O Notation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "courses/current/Udemy/Data Structures and Algorithms/02 - Big 0 Notation/Big O Notation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "courses/current/Udemy/Data Structures and Algorithms/02 - Big 0 Notation/Big O Notation.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -148,17 +140,36 @@
   },
   "active": "b4fead95c0a56456",
   "lastOpenFiles": [
+    "leetCode/easy/data-structures/linkedList/1-delete-node-linkedList/app.js",
+    "leetCode/easy/data-structures/linkedList/1-delete-node-linkedList/index.html",
+    "leetCode/easy/strings/9-longest-common-prefix-old/index.html",
+    "leetCode/easy/strings/9-longest-common-prefix-old/app.js",
+    "leetCode/easy/strings/9-longest-common-prefix/index.html",
+    "leetCode/easy/strings/9-longest-common-prefix/app.js",
+    "leetCode/easy/strings/8-count-and-say-old/index.html",
+    "leetCode/easy/strings/8-count-and-say-old/app.js",
+    "leetCode/easy/strings/8-count-and-say/index.html",
+    "leetCode/easy/strings/8-count-and-say/app.js",
+    "leetCode/easy/strings/7-implement-strStr-old/index.html",
+    "leetCode/easy/strings/7-implement-strStr/strStr-runtime.png",
+    "documentation/markdown/Markdown Cheatsheet.md",
+    "documentation/javascript/Javascript Overview.md",
+    "documentation/javascript/Asynchronous Operations.md",
+    "documentation/javascript/Array Methods.md",
+    "documentation/express/Express Crash Course/routes/crud/Express - Routes - Update a Member.md",
+    "documentation/express/Express Crash Course/routes/crud/Express - Routes - Read all Members.md",
+    "documentation/express/Express Crash Course/routes/crud/Express - Routes - Delete a Member.md",
+    "documentation/express/Express Crash Course/routes/crud/Express - Routes - Create a Member.md",
+    "documentation/express/Express Crash Course/setup/Express - Getting Started.md",
+    "documentation/express/Express Crash Course/setup/Express - Creating your Server.md",
+    "documentation/express/Express Crash Course/routes/Express - Routes - Using URL Parameters.md",
+    "documentation/express/Express Crash Course/rendering-templates/Express - Rendering Templates & Forms.md",
+    "documentation/express/Express Crash Course/routes/Express - Routes - Move to Routes Folder.md",
+    "documentation/express/Express Crash Course/middleware/Express - Creating Middleware.md",
+    "documentation/express/Express Crash Course/Express Crash Course.md",
+    "documentation/express/Express - Routes - Create a Member.md",
     "courses/future/harvard/0-intro/week-0.md",
-    "courses/future/harvard/0-intro/index.html",
-    "courses/future/harvard/0-intro/app.js",
-    "courses/future/harvard/0-intro",
-    "courses/current/Udemy/Modern Javascript from the Beginning/JS_Lessons/Section-3_DOMManipulation/3-22_WhatIsTheDOM/3_2_project_files/js_sandbox/js_sandbox/index.html",
-    "courses/current/Udemy/Modern Javascript from the Beginning/JS_Lessons/Section-3_DOMManipulation/3-22_WhatIsTheDOM/3_2_project_files/js_sandbox/js_sandbox/app.js",
-    "courses/current/Udemy/Modern Javascript from the Beginning/JS_Lessons/Section-3_DOMManipulation/3-22_WhatIsTheDOM/3_2_project_files/js_sandbox/js_sandbox",
-    "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/microposts/assets/css/style.css",
-    "courses/current/Udemy/Modern Javascript from the Beginning/JS_Lessons/Section-3_DOMManipulation/3-22_WhatIsTheDOM/3_2_project_files/js_sandbox",
-    "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/microposts/src/ui.js",
-    "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/microposts/src/http.js",
+    "courses/future/Udemy/MERN - Front to Back/MERN - Front to Back.md",
     "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/loancalculator/img/loading.gif",
     "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/microposts/README.md",
     "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/readme.md",
@@ -167,23 +178,13 @@
     "courses/current/Udemy/Data Structures and Algorithms/General Notes/Algorithms & Problem Solving Patterns.md",
     "courses/current/Udemy/Data Structures and Algorithms/30 - The Wild West/The Wild West.md",
     "courses/current/Udemy/Data Structures and Algorithms/29 - Dynamic Programming/Dynamic Programming.md",
-    "courses/current/Udemy/Data Structures and Algorithms/28 - Dijkstra's Algorithm/Dijkstra's Algorithm.md",
-    "courses/current/Udemy/Data Structures and Algorithms/27 - Graph Traversal/Graph Traversal.md",
-    "courses/current/Udemy/Data Structures and Algorithms/26 - Graphs/Graphs.md",
-    "courses/current/Udemy/Data Structures and Algorithms/25 - Hash Tables/Hash Tables.md",
-    "courses/current/Udemy/Data Structures and Algorithms/24 - Binary Heaps/Binary Heaps.md",
-    "courses/current/Udemy/Data Structures and Algorithms/23 - Tree Traversal/Tree Traversal.md",
-    "courses/current/Udemy/Data Structures and Algorithms/22 - Binary Search Trees/Binary Search Trees.md",
-    "courses/current/Udemy/Data Structures and Algorithms/21 - Stacks and Queues/Stacks and Queues.md",
-    "courses/current/Udemy/Data Structures and Algorithms/20 - Doubly Linked Lists/Doubly Linked Lists.md",
-    "courses/current/Udemy/Data Structures and Algorithms/19 - Singly Linked Lists/Singly-Linked-List-Intro.md",
-    "courses/current/Udemy/Data Structures and Algorithms/18 - Data Structures Introduction/Data-Structures-Introduction.md",
-    "courses/current/Udemy/Data Structures and Algorithms/17 - Radix Sort/Radix Sort.md",
-    "courses/current/Udemy/Data Structures and Algorithms/16 - Quick Sort/Quick Sort.md",
-    "courses/current/Udemy/Data Structures and Algorithms/15 - Merge Sort/Merge Sort.md",
-    "courses/current/Udemy/Data Structures and Algorithms/14 - Comparing Bubble, Selection, and Insertion Sort/Comparing Bubble, Selection, and Insertion Sort.md",
-    "courses/current/Udemy/Data Structures and Algorithms/13 - Insertion Sort/Insertion Sort.md",
-    "courses/current/Udemy/Data Structures and Algorithms/12 - Selection Sort/Selection Sort.md",
-    "courses/current/Udemy/Data Structures and Algorithms/11 - Bubble Sort/Bubble Sort.md"
+    "s3-file-uploader/client/src/logo.svg",
+    "s3-file-uploader/client/public/logo512.png",
+    "s3-file-uploader/client/public/logo192.png",
+    "interviews/sewerAI/frontend-assignment/src/logo.svg",
+    "interviews/sewerAI/frontend-assignment/public/logo512.png",
+    "interviews/sewerAI/frontend-assignment/public/logo192.png",
+    "interviews/sewerAI/frontend-assignment/public/data-labelling-thumbnail.png",
+    "interviews/sewerAI/frontend-assignment/build/logo512.png"
   ]
 }

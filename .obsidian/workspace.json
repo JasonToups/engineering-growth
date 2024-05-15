@@ -11,8 +11,12 @@
             "id": "b4fead95c0a56456",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "courses/1 - current/Udemy/2 - The Modern React Bootcamp/1 - Intro/Intro.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "courses/1 - current/Udemy/2 - The Modern React Bootcamp/1 - Intro/Intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "courses/1 - current/Udemy/2 - The Modern React Bootcamp/1 - Intro/Intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "courses/1 - current/Udemy/2 - The Modern React Bootcamp/1 - Intro/Intro.md"
+              }
             }
           }
         ]
@@ -138,25 +146,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bd9b65d16e122c03",
+  "active": "b4fead95c0a56456",
   "lastOpenFiles": [
-    "courses/2 - future/4 - Udacity/Udacity-Intro-to-Javascript/6-6-array-joiningTheCrew.js",
-    "courses/2 - future/4 - Udacity/Udacity-Intro-to-Javascript/6-5-array-hasEnoughPlayers.js",
-    "courses/2 - future/4 - Udacity/Udacity-Intro-to-Javascript/6-4-arrayMethods-pushAndPop-colorsOfTheRainbow.js",
-    "courses/2 - future/4 - Udacity/Udacity-Intro-to-Javascript/6-3-arrayChange-priceIsRight.js",
-    "courses/2 - future/4 - Udacity/Udacity-Intro-to-Javascript/6-2-arraysWithVariables-buildingTheCrew.js",
-    "courses/2 - future/4 - Udacity/Udacity-Intro-to-Javascript/6-1-arrayFamily.js",
-    "courses/2 - future/4 - Udacity/Udacity-Intro-to-Javascript/5-6-inlineExpressions.js",
-    "courses/2 - future/4 - Udacity/Udacity-Intro-to-Javascript/5-5-variableName-cry.js",
-    "courses/2 - future/4 - Udacity/Udacity-Intro-to-Javascript/5-4-anonymousFunction-laughs.js",
-    "courses/2 - future/4 - Udacity/Udacity-Intro-to-Javascript/5-3-scope-buildATriangle.js",
-    "courses/2 - future/4 - Udacity/Udacity-Intro-to-Javascript/5-2-functions-laughItOff2.js",
+    "courses/1 - current/Udemy/1 - Data Structures and Algorithms/02 - Big 0 Notation/Big O Notation.md",
+    "courses/1 - current/Udemy/2 - The Modern React Bootcamp/1 - Intro/Intro.md",
+    "courses/1 - current/Udemy/2 - The Modern React Bootcamp/39 - Bonus Webpack Mini Course - Your Own Simple Version of Create React App",
+    "courses/1 - current/Udemy/2 - The Modern React Bootcamp/untitled folder",
+    "courses/1 - current/Udemy/2 - The Modern React Bootcamp/38 - Next Fetching and Server API",
+    "courses/1 - current/Udemy/2 - The Modern React Bootcamp/37 - Next JS",
+    "courses/1 - current/Udemy/2 - The Modern React Bootcamp/36 - State Management with useReducer and useContext",
+    "courses/1 - current/Udemy/2 - The Modern React Bootcamp/35 - Using Context with Hooks",
+    "courses/1 - current/Udemy/2 - The Modern React Bootcamp/34 - Context API",
+    "courses/1 - current/Udemy/2 - The Modern React Bootcamp/33 - React Hooks Project",
+    "courses/1 - current/Udemy/2 - The Modern React Bootcamp/32 - React Hooks",
+    "courses/1 - current/Udemy/2 - The Modern React Bootcamp/31 - The Massive Color Project Part 7",
+    "courses/1 - current/Udemy/1 - Data Structures and Algorithms/General Notes/Overall Notes for Course.md",
     "courses/2 - future/2 - Harvard/0-intro/week-0.md",
     "courses/2 - future/2 - harvard/0-intro/week-0.md",
     "courses/2 - future/1 - Udemy/MERN - Front to Back/MERN - Front to Back.md",
-    "courses/1 - current/Udemy/2 - Modern Javascript from the Beginning/modern_js_course_projects/loancalculator/img/loading.gif",
-    "courses/1 - current/Udemy/2 - Modern Javascript from the Beginning/modern_js_course_projects/microposts/README.md",
-    "courses/1 - current/Udemy/2 - Modern Javascript from the Beginning/modern_js_course_projects/readme.md",
+    "courses/1 - current/Udemy/3 - Modern Javascript from the Beginning/modern_js_course_projects/loancalculator/img/loading.gif",
+    "courses/1 - current/Udemy/3 - Modern Javascript from the Beginning/modern_js_course_projects/microposts/README.md",
+    "courses/1 - current/Udemy/3 - Modern Javascript from the Beginning/modern_js_course_projects/readme.md",
     "courses/1 - current/Udemy/1 - Data Structures and Algorithms/General Notes/Sorting Algorithms.md",
     "courses/1 - current/Udemy/1 - Data Structures and Algorithms/General Notes/Algorithms & Problem Solving Patterns.md",
     "courses/1 - current/Udemy/1 - Data Structures and Algorithms/General Notes/Quick Sort.md",
@@ -175,8 +185,6 @@
     "courses/1 - current/Udemy/1 - Data Structures and Algorithms/18 - Data Structures Introduction/Data-Structures-Introduction.md",
     "courses/1 - current/Udemy/1 - Data Structures and Algorithms/17 - Radix Sort/Radix Sort.md",
     "courses/1 - current/Udemy/1 - Data Structures and Algorithms/16 - Quick Sort/Quick Sort.md",
-    "courses/1 - current/Udemy/1 - Data Structures and Algorithms/15 - Merge Sort/Merge Sort.md",
-    "courses/1 - current/Udemy/1 - Data Structures and Algorithms/14 - Comparing Bubble, Selection, and Insertion Sort/Comparing Bubble, Selection, and Insertion Sort.md",
     "courses/1 - current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/loancalculator/img/loading.gif",
     "leetCode/easy/strings/7-implement-strStr/strStr-runtime.png",
     "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/loancalculator/img/loading.gif",

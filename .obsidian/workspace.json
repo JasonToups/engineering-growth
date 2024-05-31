@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "documentation/javascript/Dependency Injection.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 451.5
+    "width": 241.5
   },
   "right": {
     "id": "d8e16ce8fa821c8f",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "documentation/javascript/Dependency Injection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "documentation/javascript/Dependency Injection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "documentation/javascript/Dependency Injection.md"
               }
             }
           }
@@ -146,12 +146,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bd9b65d16e122c03",
+  "active": "b4fead95c0a56456",
   "lastOpenFiles": [
+    "documentation/javascript/attachments/dependency-injection-example-chat.png",
+    "documentation/javascript/attachments",
+    "dependency-injection-example-chat.png",
+    "documentation/javascript/Dependency Injection.md",
+    "README.md",
     "interviews/Interview Questions.md",
     "Untitled.md",
     "interviews/coinlist/Storm 2 - Coinlist.md",
-    "documentation/javascript/Dependency Injection.md",
     "courses/1 - current/Udemy/2 - The Modern React Bootcamp/1 - Intro/Intro.md",
     "interviews/coinlist",
     "interviews",
@@ -163,7 +167,6 @@
     "courses/1 - current/Udemy/2 - The Modern React Bootcamp/36 - State Management with useReducer and useContext",
     "courses/1 - current/Udemy/2 - The Modern React Bootcamp/35 - Using Context with Hooks",
     "courses/1 - current/Udemy/2 - The Modern React Bootcamp/34 - Context API",
-    "courses/1 - current/Udemy/2 - The Modern React Bootcamp/33 - React Hooks Project",
     "courses/1 - current/Udemy/1 - Data Structures and Algorithms/General Notes/Overall Notes for Course.md",
     "courses/2 - future/2 - Harvard/0-intro/week-0.md",
     "courses/2 - future/2 - harvard/0-intro/week-0.md",
@@ -183,8 +186,6 @@
     "courses/1 - current/Udemy/1 - Data Structures and Algorithms/24 - Binary Heaps/Binary Heaps.md",
     "courses/1 - current/Udemy/1 - Data Structures and Algorithms/23 - Tree Traversal/Tree Traversal.md",
     "courses/1 - current/Udemy/1 - Data Structures and Algorithms/22 - Binary Search Trees/Binary Search Trees.md",
-    "courses/1 - current/Udemy/1 - Data Structures and Algorithms/21 - Stacks and Queues/Stacks and Queues.md",
-    "courses/1 - current/Udemy/1 - Data Structures and Algorithms/20 - Doubly Linked Lists/Doubly Linked Lists.md",
     "courses/1 - current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/loancalculator/img/loading.gif",
     "leetCode/easy/strings/7-implement-strStr/strStr-runtime.png",
     "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/loancalculator/img/loading.gif",
@@ -192,7 +193,6 @@
     "s3-file-uploader/client/public/logo512.png",
     "s3-file-uploader/client/public/logo192.png",
     "interviews/sewerAI/frontend-assignment/src/logo.svg",
-    "interviews/sewerAI/frontend-assignment/public/logo512.png",
-    "interviews/sewerAI/frontend-assignment/public/logo192.png"
+    "interviews/sewerAI/frontend-assignment/public/logo512.png"
   ]
 }

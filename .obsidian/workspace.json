@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "courses/1 - current/Udemy/2 - The Modern React Bootcamp/1 - Intro/Intro.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "courses/1 - current/Udemy/2 - The Modern React Bootcamp/1 - Intro/Intro.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "courses/1 - current/Udemy/2 - The Modern React Bootcamp/1 - Intro/Intro.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "courses/1 - current/Udemy/2 - The Modern React Bootcamp/1 - Intro/Intro.md"
+                "file": "README.md"
               }
             }
           }
@@ -146,10 +146,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b4fead95c0a56456",
+  "active": "bd9b65d16e122c03",
   "lastOpenFiles": [
-    "courses/1 - current/Udemy/1 - Data Structures and Algorithms/02 - Big 0 Notation/Big O Notation.md",
+    "interviews/Interview Questions.md",
+    "Untitled.md",
+    "interviews/coinlist/Storm 2 - Coinlist.md",
+    "documentation/javascript/Dependency Injection.md",
     "courses/1 - current/Udemy/2 - The Modern React Bootcamp/1 - Intro/Intro.md",
+    "interviews/coinlist",
+    "interviews",
+    "courses/1 - current/Udemy/1 - Data Structures and Algorithms/02 - Big 0 Notation/Big O Notation.md",
     "courses/1 - current/Udemy/2 - The Modern React Bootcamp/39 - Bonus Webpack Mini Course - Your Own Simple Version of Create React App",
     "courses/1 - current/Udemy/2 - The Modern React Bootcamp/untitled folder",
     "courses/1 - current/Udemy/2 - The Modern React Bootcamp/38 - Next Fetching and Server API",
@@ -158,8 +164,6 @@
     "courses/1 - current/Udemy/2 - The Modern React Bootcamp/35 - Using Context with Hooks",
     "courses/1 - current/Udemy/2 - The Modern React Bootcamp/34 - Context API",
     "courses/1 - current/Udemy/2 - The Modern React Bootcamp/33 - React Hooks Project",
-    "courses/1 - current/Udemy/2 - The Modern React Bootcamp/32 - React Hooks",
-    "courses/1 - current/Udemy/2 - The Modern React Bootcamp/31 - The Massive Color Project Part 7",
     "courses/1 - current/Udemy/1 - Data Structures and Algorithms/General Notes/Overall Notes for Course.md",
     "courses/2 - future/2 - Harvard/0-intro/week-0.md",
     "courses/2 - future/2 - harvard/0-intro/week-0.md",
@@ -181,10 +185,6 @@
     "courses/1 - current/Udemy/1 - Data Structures and Algorithms/22 - Binary Search Trees/Binary Search Trees.md",
     "courses/1 - current/Udemy/1 - Data Structures and Algorithms/21 - Stacks and Queues/Stacks and Queues.md",
     "courses/1 - current/Udemy/1 - Data Structures and Algorithms/20 - Doubly Linked Lists/Doubly Linked Lists.md",
-    "courses/1 - current/Udemy/1 - Data Structures and Algorithms/19 - Singly Linked Lists/Singly-Linked-List-Intro.md",
-    "courses/1 - current/Udemy/1 - Data Structures and Algorithms/18 - Data Structures Introduction/Data-Structures-Introduction.md",
-    "courses/1 - current/Udemy/1 - Data Structures and Algorithms/17 - Radix Sort/Radix Sort.md",
-    "courses/1 - current/Udemy/1 - Data Structures and Algorithms/16 - Quick Sort/Quick Sort.md",
     "courses/1 - current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/loancalculator/img/loading.gif",
     "leetCode/easy/strings/7-implement-strStr/strStr-runtime.png",
     "courses/current/Udemy/Modern Javascript from the Beginning/modern_js_course_projects/loancalculator/img/loading.gif",
